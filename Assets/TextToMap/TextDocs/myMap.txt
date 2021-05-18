@@ -2,9 +2,9 @@
 ##oooooo##
 ##oooooo##
 ##oooooo##
-##oooooo##
-##oooooo##
-##oooooo##
+##oo123o##
+##oo456o##
+##oo789o##
 ##oooooo##
 ##oooooo##
 ##########
