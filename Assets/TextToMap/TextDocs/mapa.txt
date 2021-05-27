@@ -1,0 +1,49 @@
+﻿      aaaaaaaaaaaaa  ID   TTTTTTTT              TTTTTTTT          aaaaa
+         aaaaaaaaaa  id   TTTTTTTT   ID    f    TTTTTTTT  g       aaaaa
+          aaaaaaaa        ########   id         ########      f   aaaaa
+    f      aaaaaaa        #v#v#p##       ID     #v#v#p##          aaaaa
+     g      aaaaa   f     #####P##       id     #####P##         gaaaaa
+            aaaaa                                                 aaaaa
+            aaaaag                               ID               aaaaa
+            taaat                    TTTTTTTT    id         f     aaaaa
+            t123t           f        TTTTTTTT                     aaaaa
+            t456t                    ########        g       ID   aaaaa
+            t789t                    #v#v#p##                id   aaaaa
+            taaat                    #####P##                     aaaaa
+            aaaaag                                                taaat
+            aaaaa   "-----------¬f                                t123t
+            aaaaa f |           ·f          ID                    t456t
+            aaaaaa  |                       id           g        t789t
+            aaaaaa  L-----------_ff                       f       taaat
+    f       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaannaaaaaaaaaaaaaaaaaaaaa
+   f        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaannaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa     "----  ----¬     aaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa      |          |      aaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa       ·          ·       aaaaaaaaa
++
+jugador,2,0
+cartel,13,66
+buzon,6,34,casa de Juan
+buzon,6,55,casa de Toni
+buzon,13,45,casa de Alex
+baul,15,22,arco,pocion
+baul,22,49,manzana
+baul,22,50
+moneda,22,45
+moneda,22,46
+moneda,22,47
+moneda,22,48
+moneda,22,51
+moneda,22,52
+moneda,22,53
+moneda,22,54                                                           
+moneda,21,45
+moneda,21,46
+moneda,21,47
+moneda,21,48
+moneda,21,49
+moneda,21,50
+moneda,21,51
+moneda,21,52
+moneda,21,53
+moneda,21,54

@@ -28,10 +28,10 @@ public class characterController : MonoBehaviour
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
 
-        /*if (move.x < 0)
-            transform.localScale = new Vector2(-1, transform.localScale.y);
+        if (move.x < 0)
+            transform.localScale = new Vector2(-0.5f, transform.localScale.y);
         else if (move.x > 0)
-            transform.localScale = new Vector2(1, 1);*/
+            transform.localScale = new Vector2(0.5f, 0.5f);
 
         if (move != Vector2.zero)
         {
