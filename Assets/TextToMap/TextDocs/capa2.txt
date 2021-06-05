@@ -1,18 +1,18 @@
 jugador
-2
 0
+-2
 cartel
-13
-66
+65
+-11
 buzon
-6
-34
+32
+-5
 casa de Juan
 buzon
-6
-55
+54
+-5
 casa de Toni
 buzon
-13
-45
+43
+-12
 casa de Alex
