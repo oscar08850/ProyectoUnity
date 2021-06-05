@@ -341,6 +341,7 @@ MonoBehaviour:
     prefab: {fileID: 1686149374834522720, guid: 01cb7cc2ae0d331469f43579ed1b43e6,
       type: 3}
   mapText: {fileID: 4900000, guid: 81b09ad522055cd48b95b5cd81483c5f, type: 3}
+  mapText2: {fileID: 4900000, guid: 30e42fbe881939e42b43177fd64ee2ae, type: 3}
   currentPosition: {x: 0, y: 0}
 --- !u!4 &1590685462
 Transform:

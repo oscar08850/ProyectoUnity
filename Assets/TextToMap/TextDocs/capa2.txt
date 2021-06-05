@@ -1,0 +1,18 @@
+jugador
+2
+0
+cartel
+13
+66
+buzon
+6
+34
+casa de Juan
+buzon
+6
+55
+casa de Toni
+buzon
+13
+45
+casa de Alex

@@ -7,6 +7,7 @@ public class TextToMap : MonoBehaviour
 {
     public TextMapping[] mappingData;
     public TextAsset mapText;
+    public TextAsset mapText2;
 
     public Vector2 currentPosition = new Vector2(0, 0);
 
@@ -19,115 +20,54 @@ public class TextToMap : MonoBehaviour
     private void GenerateMap()
     {
         string[] rows = Regex.Split(mapText.text, "\r\n|\r|\n");
-        int i = 0;
+        string[] filas = Regex.Split(mapText2.text, "\r\n|\r|\n");
+        string a = "";
 
         foreach (string row in rows)
         {
-            if (i == 0)
+            foreach (char c in row)
             {
-                foreach (char c in row)
+                foreach (TextMapping tm in mappingData)
                 {
-                    foreach (TextMapping tm in mappingData)
+                    if (c == tm.character)
                     {
-                        if (c == tm.character)
-                        {
-
-                            if (c.Equals('+'))
-                            {
-                                i = 1;
-                            }
-                            else
-                            {
-                                Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
-                            }
-                        }
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
                     }
-                    currentPosition = new Vector2(++currentPosition.x, currentPosition.y);
                 }
-                currentPosition = new Vector2(0, --currentPosition.y);
+                currentPosition = new Vector2(++currentPosition.x, currentPosition.y);
             }
-            else
+            currentPosition = new Vector2(0, --currentPosition.y);
+        }
+        foreach (string fila in filas)
+        {
+            a = a + fila;
+            int i;
+            string[] palabra = Regex.Split(a, "\r\n|\r|\n");
+            char q;
+            if (palabra[1] == "jugador")
             {
-                int j = 0;
-                string[] fila = row.Split(',');
-                if (fila[0] == "jugador")
+                currentPosition = new Vector2(5, 5);
+                q = '+';
+                foreach (TextMapping tm in mappingData)
                 {
-                    char c = '+';
-
-                    foreach (TextMapping tm in mappingData)
+                    if (q == tm.character)
                     {
-                        if (c == tm.character)
-                        {
-                            Vector2 currentPosition2 = new Vector2(System.Convert.ToSingle(fila[1]), System.Convert.ToSingle(fila[2]));
-                            Instantiate(tm.prefab, currentPosition2, Quaternion.identity, transform);
-                            j = 1;
-
-                        }
-                        else { }
-                    }
-
-                }
-                else if (fila[0] == "buzon")
-                {
-                    char c = 'b';
-                    string texto = fila[3];
-                    while (j == 0)
-                    {
-                        foreach (TextMapping tm in mappingData)
-                        {
-                            if (c == tm.character)
-                            {
-                                Vector2 currentPosition2 = new Vector2(System.Convert.ToSingle(fila[1]), System.Convert.ToSingle(fila[2]));
-                                Instantiate(tm.prefab, currentPosition2, Quaternion.identity, transform);
-                            }
-                        }
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
                     }
                 }
-                else if (fila[0] == "baul")
+            }
+            else if (palabra[6] == "buzon")
+            {
+                q = 'b';
+                foreach (TextMapping tm in mappingData)
                 {
-                    char c = 'B';
-                    string elementos = "";
-                    for (int k = 3; k < fila.Length; k++)
+                    if (q == tm.character)
                     {
-                        elementos = elementos + fila[k] + ",";
-                    }
-                    foreach (TextMapping tm in mappingData)
-                    {
-                        if (c == tm.character)
-                        {
-                            Vector2 currentPosition2 = new Vector2(System.Convert.ToSingle(fila[1]), System.Convert.ToSingle(fila[2]));
-                            Instantiate(tm.prefab, currentPosition2, Quaternion.identity, transform);
-                        }
-                    }
-                }
-                else if (fila[0] == "cartel")
-                {
-                    char c = 'c';
-                    string texto = fila[3];
-                    foreach (TextMapping tm in mappingData)
-                    {
-                        if (c == tm.character)
-                        {
-                            Vector2 currentPosition2 = new Vector2(System.Convert.ToSingle(fila[1]), System.Convert.ToSingle(fila[2]));
-                            Instantiate(tm.prefab, currentPosition2, Quaternion.identity, transform);
-                        }
-                        else { }
-                    }
-
-                }
-                else
-                {
-                    char c = 'm';
-                    foreach (TextMapping tm in mappingData)
-                    {
-                        if (c == tm.character)
-                        {
-                            Vector2 currentPosition2 = new Vector2(System.Convert.ToSingle(fila[1]), System.Convert.ToSingle(fila[2]));
-                            Instantiate(tm.prefab, currentPosition2, Quaternion.identity, transform);
-                        }
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
                     }
                 }
             }
         }
+        
     }
 }
