@@ -8,6 +8,8 @@ public class characterController : MonoBehaviour
     
     Rigidbody2D rb;
     Animator animator;
+    public GameObject crosshair;
+    public float CROSSHAIR_DISTANCE = 1.0f;
 
     Vector2 move;
 
@@ -46,6 +48,16 @@ public class characterController : MonoBehaviour
         
 
         rb.MovePosition(transform.position + (Vector3)move * Time.deltaTime * velocidad);
+        Aim();
+            
+    }
+
+    void Aim()
+    {
+        if (move != Vector2.zero)
+        {
+            crosshair.transform.localPosition = move * CROSSHAIR_DISTANCE;
+        }
     }
 
    
