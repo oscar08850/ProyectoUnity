@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class characterController2 : MonoBehaviour
+public class control : MonoBehaviour
 {
 
     Animator animator;
@@ -36,7 +36,6 @@ public class characterController2 : MonoBehaviour
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         GestionarOrientacion(Input.GetAxis("Horizontal"));
-
         //movements();
     }
 
@@ -82,9 +81,7 @@ public class characterController2 : MonoBehaviour
         {
             mirandoDerecha = !mirandoDerecha;
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-            force.force.Set(-10, 0);
-
-
+            //force.force.Set(-10, 0);
 
         }
     }
