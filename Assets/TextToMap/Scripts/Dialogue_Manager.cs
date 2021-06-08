@@ -50,15 +50,28 @@ public class Dialogue_Manager : MonoBehaviour
         activeSentence = sentences.Dequeue();
         Debug.Log(activeSentence);
         displayText.text = activeSentence;
-        
 
-        //displayText.text = activeSentence;
+        StopAllCoroutines();
+        StartCoroutine(TypeTheSentence(activeSentence));
+    }
+
+    IEnumerator TypeTheSentence(string sentence)
+    {
+        displayText.text = "";
+
+        foreach(char letter in sentence.ToCharArray())
+        {
+            displayText.text += letter;
+            myAudio.PlayOneShot(speakSound);
+            yield return new WaitForSeconds(typingSpeed);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
+            dialoguePanel.SetActive(true);
             StartDialogue();
         }
     }
@@ -67,13 +80,19 @@ public class Dialogue_Manager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //if (Input.GetKeyDown(KeyCode.Return))
-            if (Input.GetButtonDown("Fire1"))
-               
+            if (Input.GetKeyDown(KeyCode.Return) && displayText.text == activeSentence)               
             {
-                Debug.Log("DSA mola");
                 DisplayNextSentence();
             }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D obj)
+    {
+        if(obj.CompareTag("Player"))
+        {
+            dialoguePanel.SetActive(false);
+            StopAllCoroutines();
         }
     }
 }

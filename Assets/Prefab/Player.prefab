@@ -185,7 +185,7 @@ MonoBehaviour:
   firePoint: {fileID: 3735020343974175411}
   arrowPrefab: {fileID: 7130864611110902114, guid: 22d403d72be673e41ab24eb1274057f8,
     type: 3}
-  a: {fileID: 0}
+  a: {fileID: 7145150057175732136}
   bulletForce: 20
 --- !u!1 &9106078570895982304
 GameObject:

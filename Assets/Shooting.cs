@@ -17,7 +17,6 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(a.mirandoDerecha);
         if (a.mirandoDerecha == true)
         {
             if (Input.GetButtonDown("Fire1"))
