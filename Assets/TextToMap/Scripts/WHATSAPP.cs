@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class characterController2 : MonoBehaviour
+public class WHATSAPP : MonoBehaviour
 {
 
     Animator animator;
@@ -15,7 +15,7 @@ public class characterController2 : MonoBehaviour
 
     public Rigidbody2D rb;
     public ConstantForce2D force;
-    public float moveSpeed = 5.0f; //Cambiar valor para cambiar velocidad personaje
+    public float moveSpeed = 25.0f; //Cambiar valor para cambiar velocidad personaje
 
 
     void Start()
@@ -36,7 +36,6 @@ public class characterController2 : MonoBehaviour
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         GestionarOrientacion(Input.GetAxis("Horizontal"));
-
         //movements();
     }
 
@@ -82,6 +81,7 @@ public class characterController2 : MonoBehaviour
         {
             mirandoDerecha = !mirandoDerecha;
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+
         }
     }
 

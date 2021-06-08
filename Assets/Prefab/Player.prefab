@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1384894275239808405, guid: cd46982eec917694c8641c51b606d020, type: 3}
   rb: {fileID: 0}
+  force: {fileID: 0}
   moveSpeed: 10
 --- !u!1 &9106078570895982304
 GameObject:

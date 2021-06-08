@@ -1,6 +1,9 @@
 jugador
 0
 -2
+enemigo
+3
+-11
 cartel
 65
 -11

@@ -59,6 +59,20 @@ public class TextToMap : MonoBehaviour
                     }
                 }
             }
+
+            else if (filas[i] == "enemigo")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = 'k';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+
             else if (filas[i] == "cartel")
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
