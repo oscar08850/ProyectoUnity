@@ -10,7 +10,7 @@ public class control : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
     public Camera cam;
-    public bool mirandoDerecha = true;
+    public bool mirandoDerecha = false;
 
 
     public Rigidbody2D rb;
@@ -23,8 +23,6 @@ public class control : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         force = GetComponent<ConstantForce2D>();
         animator = GetComponent<Animator>();
-        Debug.Log("HELLO");
-
     }
 
 
@@ -36,9 +34,9 @@ public class control : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
         GestionarOrientacion(Input.GetAxis("Horizontal"));
-        Debug.Log("HELLO");
 
 
         //movements();
@@ -52,9 +50,10 @@ public class control : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Mirar si el 90 es correcto
         rb.rotation = angle;
-        Debug.Log(mirandoDerecha);
+        
 
     }
+   
 
     void movements()
     {
@@ -65,10 +64,15 @@ public class control : MonoBehaviour
         {
 
             if (movement.x < 0)
+            {
                 transform.localScale = new Vector2(0.5f, transform.localScale.y);
+                mirandoDerecha = false;
+            }
             else if (movement.x > 0)
+            {
                 transform.localScale = new Vector2(0.5f, 0.5f);
-
+                mirandoDerecha = true;
+            }
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Magnitude", movement.magnitude);
@@ -88,7 +92,6 @@ public class control : MonoBehaviour
         {
             mirandoDerecha = !mirandoDerecha;
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-            //force.force.Set(-10, 0);
 
         }
     }
