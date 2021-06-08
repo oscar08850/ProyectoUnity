@@ -17,19 +17,39 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) { 
-           Shoot();
+        Debug.Log(a.mirandoDerecha);
+        if (a.mirandoDerecha == true)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+            }
         }
-        //Debug.Log(a.mirandoDerecha);
+        
+        else
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Debug.Log("Estamos dentro");
+                Shoot2();
+            }
+        }
+        
+
   
      
     }
 
 
-    void Shoot()
+    void Shoot() //Disparo derecha
     {
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb2 = arrow.GetComponent<Rigidbody2D>();
+        ConstantForce2D force2D = arrow.GetComponent<ConstantForce2D>();
+        SpriteRenderer sprite = arrow.GetComponent<SpriteRenderer>();
+
+        force2D.force = new Vector2(50, 0);
+        sprite.flipX = false;
         //derecha = FindObjectOfType<control>();
 
         //getcomponent<ConstantForce2D>().force = new Vector2(50,50);
@@ -39,6 +59,20 @@ public class Shooting : MonoBehaviour
         //rb2.GetComponent<ConstantForce2D>.bulletForce = new Vector2(60, 60);
 
         rb2.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+
+
+    }
+
+    void Shoot2()//Disparo Izquierda
+    {
+        GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb2 = arrow.GetComponent<Rigidbody2D>();
+        ConstantForce2D force2D = arrow.GetComponent<ConstantForce2D>();
+        SpriteRenderer sprite = arrow.GetComponent<SpriteRenderer>();
+        force2D.force = new Vector2(-50, 0);
+        sprite.flipX = true;
+        rb2.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+
 
 
     }

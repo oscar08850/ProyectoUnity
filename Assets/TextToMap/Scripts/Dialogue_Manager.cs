@@ -45,10 +45,14 @@ public class Dialogue_Manager : MonoBehaviour
             displayText.text = activeSentence;
             return;
         }
+        Debug.Log(displayText.text);
 
         activeSentence = sentences.Dequeue();
         Debug.Log(activeSentence);
         displayText.text = activeSentence;
+        
+
+        //displayText.text = activeSentence;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -63,7 +67,9 @@ public class Dialogue_Manager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            //if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetButtonDown("Fire1"))
+               
             {
                 Debug.Log("DSA mola");
                 DisplayNextSentence();
