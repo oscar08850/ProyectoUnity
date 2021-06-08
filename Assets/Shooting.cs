@@ -46,7 +46,10 @@ public class Shooting : MonoBehaviour
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb2 = arrow.GetComponent<Rigidbody2D>();
         ConstantForce2D force2D = arrow.GetComponent<ConstantForce2D>();
+        SpriteRenderer sprite = arrow.GetComponent<SpriteRenderer>();
+
         force2D.force = new Vector2(50, 0);
+        sprite.flipX = false;
         //derecha = FindObjectOfType<control>();
 
         //getcomponent<ConstantForce2D>().force = new Vector2(50,50);
@@ -65,8 +68,9 @@ public class Shooting : MonoBehaviour
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb2 = arrow.GetComponent<Rigidbody2D>();
         ConstantForce2D force2D = arrow.GetComponent<ConstantForce2D>();
+        SpriteRenderer sprite = arrow.GetComponent<SpriteRenderer>();
         force2D.force = new Vector2(-50, 0);
-
+        sprite.flipX = true;
         rb2.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
 
 
