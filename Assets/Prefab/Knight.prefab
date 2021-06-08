@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7760081817672733395}
   - component: {fileID: 7760081817672733396}
   - component: {fileID: 7760081817672733397}
+  - component: {fileID: 7059509995042710491}
   m_Layer: 4
   m_Name: Knight
   m_TagString: Enemy
@@ -128,3 +129,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7059509995042710491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760081817672733398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6653630598566a4bad2811c4fd3bb8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Chuck
+    sentenceList:
+    - Hello my name is Chuck
+    - How are you?
+    - 
+  dialoguePanel: {fileID: 0}
+  displayText: {fileID: 0}
+  typingSpeed: 0
+  speakSound: {fileID: 0}
