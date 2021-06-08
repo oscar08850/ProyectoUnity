@@ -10,11 +10,20 @@ public class characterController2 : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
     public Camera cam;
+    private bool mirandoDerecha = true;
 
 
     public Rigidbody2D rb;
-
+    public ConstantForce2D force;
     public float moveSpeed = 5.0f; //Cambiar valor para cambiar velocidad personaje
+
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        force = GetComponent<ConstantForce2D>();
+        animator = GetComponent<Animator>();
+    }
 
 
 
@@ -26,8 +35,7 @@ public class characterController2 : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-
+        GestionarOrientacion(Input.GetAxis("Horizontal"));
         //movements();
     }
 
@@ -43,13 +51,14 @@ public class characterController2 : MonoBehaviour
 
     void movements()
     {
+        float inputMovimiento = Input.GetAxis("Horizontal");
         movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         if (movement != Vector2.zero)
         {
 
             if (movement.x < 0)
-                transform.localScale = new Vector2(-0.5f, transform.localScale.y);
+                transform.localScale = new Vector2(0.5f, transform.localScale.y);
             else if (movement.x > 0)
                 transform.localScale = new Vector2(0.5f, 0.5f);
 
@@ -65,4 +74,16 @@ public class characterController2 : MonoBehaviour
 
        // transform.position = transform.position + movement * Time.deltaTime * velocidad;
     }
+
+    void GestionarOrientacion(float inputMovimiento)
+    {
+        if (mirandoDerecha == true && inputMovimiento < 0 || (mirandoDerecha == false && inputMovimiento > 0))
+        {
+            mirandoDerecha = !mirandoDerecha;
+            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+            //force.force.Set(-10, 0);
+            
+        }
+    }
+
 }

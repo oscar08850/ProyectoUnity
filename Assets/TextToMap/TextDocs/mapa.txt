@@ -3,15 +3,15 @@
           aaaaaaaa        ########   id         ########      f   aaaaa
     f      aaaaaaa        #v#v#p##       ID     #v#v#p##          aaaaa
      g      aaaaa   f     #####P##       id     #####P##         gaaaaa
-            aaaaa               kk                    kk          aaaaa
-            aaaaag              kk               ID   kk          aaaaa
+            aaaaa                                                 aaaaa
+            aaaaag                               ID               aaaaa
             taaat                    TTTTTTTT    id         f     aaaaa
             t123t           f        TTTTTTTT                     aaaaa
             t456t                    ########        g       ID   aaaaa
             t789t                    #v#v#p##                id   aaaaa
             taaat                    #####P##                     aaaaa
-            aaaaag                         kk                     taaat
-            aaaaa   "-----------¬f         kk                     t123t
+            aaaaag                                                taaat
+            aaaaa   "-----------¬f                                t123t
             aaaaa f |           ·f          ID                    t456t
             aaaaaa  |                       id           g        t789t
             aaaaaa  L-----------_ff                       f       taaat
