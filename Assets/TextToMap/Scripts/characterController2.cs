@@ -36,6 +36,10 @@ public class characterController2 : MonoBehaviour
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         GestionarOrientacion(Input.GetAxis("Horizontal"));
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1ade5443fe2eb170743f677c9371dce5770d6e24
         //movements();
     }
 
@@ -45,7 +49,7 @@ public class characterController2 : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
 
         Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f; //Mirar si el 90 es correcto
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Mirar si el 90 es correcto
         rb.rotation = angle;
     }
 
@@ -72,7 +76,7 @@ public class characterController2 : MonoBehaviour
             animator.SetBool("RunPlayer", false); //IDLE STATE
 
 
-       // transform.position = transform.position + movement * Time.deltaTime * velocidad;
+        // transform.position = transform.position + movement * Time.deltaTime * velocidad;
     }
 
     void GestionarOrientacion(float inputMovimiento)
@@ -81,8 +85,15 @@ public class characterController2 : MonoBehaviour
         {
             mirandoDerecha = !mirandoDerecha;
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+<<<<<<< HEAD
             //force.force.Set(-10, 0);
             
+=======
+            force.force.Set(-10, 0);
+
+
+
+>>>>>>> 1ade5443fe2eb170743f677c9371dce5770d6e24
         }
     }
 
