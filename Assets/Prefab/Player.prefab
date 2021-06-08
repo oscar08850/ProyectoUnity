@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6063304115723897415}
   - component: {fileID: 6063304115723897408}
   - component: {fileID: 6063304115723897412}
-  - component: {fileID: 5548474780343233584}
+  - component: {fileID: 4668499469137209998}
   - component: {fileID: 487022532710529459}
   m_Layer: 0
   m_Name: Player
@@ -153,7 +153,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5548474780343233584
+--- !u!114 &4668499469137209998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,12 +162,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6063304115723897410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58680d5e136d288498cca51de7b994c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c3ef0d70aed5ee40af01e4e98991f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
-  crosshair: {fileID: 0}
-  CROSSHAIR_DISTANCE: 1
+  cam: {fileID: 0}
+  mirandoDerecha: 1
+  rb: {fileID: 0}
+  force: {fileID: 0}
+  moveSpeed: 5
 --- !u!114 &487022532710529459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +185,7 @@ MonoBehaviour:
   firePoint: {fileID: 3735020343974175411}
   arrowPrefab: {fileID: 7130864611110902114, guid: 22d403d72be673e41ab24eb1274057f8,
     type: 3}
+  a: {fileID: 0}
   bulletForce: 20
 --- !u!1 &9106078570895982304
 GameObject:

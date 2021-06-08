@@ -10,7 +10,7 @@ public class control : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
     public Camera cam;
-    private bool mirandoDerecha = true;
+    public bool mirandoDerecha = true;
 
 
     public Rigidbody2D rb;
@@ -23,6 +23,8 @@ public class control : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         force = GetComponent<ConstantForce2D>();
         animator = GetComponent<Animator>();
+        Debug.Log("HELLO");
+
     }
 
 
@@ -36,6 +38,9 @@ public class control : MonoBehaviour
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         GestionarOrientacion(Input.GetAxis("Horizontal"));
+        Debug.Log("HELLO");
+
+
         //movements();
     }
 
@@ -47,6 +52,8 @@ public class control : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Mirar si el 90 es correcto
         rb.rotation = angle;
+        Debug.Log(mirandoDerecha);
+
     }
 
     void movements()

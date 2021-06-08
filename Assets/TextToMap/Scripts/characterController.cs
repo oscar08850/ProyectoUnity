@@ -10,6 +10,7 @@ public class characterController : MonoBehaviour
     Animator animator;
     public GameObject crosshair;
     public float CROSSHAIR_DISTANCE = 1.0f;
+    public bool derecha = true;
 
     Vector2 move;
 
@@ -20,9 +21,9 @@ public class characterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-    
-    
-    
+
+
+
     // Update is called once per frame
     void Update()
     {
@@ -31,9 +32,16 @@ public class characterController : MonoBehaviour
         move.y = Input.GetAxisRaw("Vertical");
 
         if (move.x < 0)
+        {
             transform.localScale = new Vector2(-0.5f, transform.localScale.y);
+            derecha = true;
+        }
         else if (move.x > 0)
+        {
             transform.localScale = new Vector2(0.5f, 0.5f);
+            derecha = false;
+        }
+
 
         if (move != Vector2.zero)
         {

@@ -60,6 +60,7 @@ public class characterController2 : MonoBehaviour
 
             if (movement.x < 0)
                 transform.localScale = new Vector2(0.5f, transform.localScale.y);
+            
             else if (movement.x > 0)
                 transform.localScale = new Vector2(0.5f, 0.5f);
 
