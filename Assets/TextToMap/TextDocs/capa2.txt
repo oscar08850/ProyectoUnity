@@ -1,6 +1,12 @@
 jugador
 0
 -2
+moneda
+30
+-6
+moneda
+30
+-8
 enemigo
 3
 -11
