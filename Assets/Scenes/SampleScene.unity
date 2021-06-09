@@ -536,6 +536,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 565934506}
     m_Modifications:
+    - target: {fileID: 6665029509034612686, guid: 594d9062d32a800418bb5e7163fb3edf,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665029509034612686, guid: 594d9062d32a800418bb5e7163fb3edf,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665029509034612687, guid: 594d9062d32a800418bb5e7163fb3edf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665029509034612687, guid: 594d9062d32a800418bb5e7163fb3edf,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6665029509811584812, guid: 594d9062d32a800418bb5e7163fb3edf,
         type: 3}
       propertyPath: m_Pivot.x
@@ -645,6 +665,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665029509811584813, guid: 594d9062d32a800418bb5e7163fb3edf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 594d9062d32a800418bb5e7163fb3edf, type: 3}
