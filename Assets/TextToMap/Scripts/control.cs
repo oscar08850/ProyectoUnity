@@ -15,7 +15,7 @@ public class control : MonoBehaviour
 
     public Rigidbody2D rb;
     public ConstantForce2D force;
-    public float moveSpeed = 5.0f; //Cambiar valor para cambiar velocidad personaje
+    public float moveSpeed = 10.0f; //Cambiar valor para cambiar velocidad personaje
 
 
     void Start()

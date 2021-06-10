@@ -9,7 +9,7 @@ public class KnightScript : MonoBehaviour
     public int health = 100;
     Animator animator;
 
-    public GameObject deathEffect;
+    public GameObject lapida;
 
     private void Start()
     {
@@ -25,13 +25,23 @@ public class KnightScript : MonoBehaviour
         if (health <= 0)
         {
             animator.SetBool("knightDie", true); //MOVEMENT STATE
-            Die();
+            
+            StartCoroutine( Die());
+
         }
     }
 
-    void Die()
+    IEnumerator Die()
     {
         Destroy(gameObject,2f);
+        yield return new WaitForSeconds(1.99f);
+        DropLapida();
 
+    }
+
+    void DropLapida()
+    {
+        Vector2 position = transform.position;
+        Instantiate(lapida, position, Quaternion.identity);
     }
 }
