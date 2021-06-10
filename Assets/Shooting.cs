@@ -49,14 +49,7 @@ public class Shooting : MonoBehaviour
 
         force2D.force = new Vector2(50, 0);
         sprite.flipX = false;
-        //derecha = FindObjectOfType<control>();
-
-        //getcomponent<ConstantForce2D>().force = new Vector2(50,50);
-
-
-
-        //rb2.GetComponent<ConstantForce2D>.bulletForce = new Vector2(60, 60);
-
+       
         rb2.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
 
 
