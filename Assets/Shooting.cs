@@ -22,6 +22,9 @@ public class Shooting : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Shoot();
+
+                a.animator.SetTrigger("ShootPlayer"); //MOVEMENT STATE
+
             }
         }
         
@@ -29,8 +32,10 @@ public class Shooting : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                Debug.Log("Estamos dentro");
                 Shoot2();
+                a.animator.SetBool("ShootPlayer", true); //MOVEMENT STATE
+                a.animator.SetBool("ShootPlayer", false); //MOVEMENT STATE
+
             }
         }
         
@@ -42,6 +47,8 @@ public class Shooting : MonoBehaviour
 
     void Shoot() //Disparo derecha
     {
+        a.animator.SetTrigger("ShootPlayer"); //MOVEMENT STATE
+
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb2 = arrow.GetComponent<Rigidbody2D>();
         ConstantForce2D force2D = arrow.GetComponent<ConstantForce2D>();

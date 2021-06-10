@@ -5,7 +5,7 @@ using UnityEngine;
 public class control : MonoBehaviour
 {
 
-    Animator animator;
+    public Animator animator;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -40,6 +40,8 @@ public class control : MonoBehaviour
 
 
         //movements();
+
+        Debug.Log("RunPlayer es: " + animator.GetBool("RunPlayer"));
     }
 
 
@@ -81,6 +83,7 @@ public class control : MonoBehaviour
         }
         else
             animator.SetBool("RunPlayer", false); //IDLE STATE
+
 
 
         // transform.position = transform.position + movement * Time.deltaTime * velocidad;
