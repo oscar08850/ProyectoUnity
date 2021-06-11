@@ -7,7 +7,7 @@ public class control : MonoBehaviour
 
     public Animator animator;
 
-    Vector2 movement;
+    public Vector2 movement;
     Vector2 mousePos;
     public Camera cam;
     public bool mirandoDerecha = false;
@@ -31,15 +31,15 @@ public class control : MonoBehaviour
     void Update()
     {
         transform.rotation = Quaternion.identity;
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        //movement.x = Input.GetAxisRaw("Horizontal");
+        //movement.y = Input.GetAxisRaw("Vertical");
+        movements();
 
         //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        GestionarOrientacion(Input.GetAxis("Horizontal"));
+        //GestionarOrientacion(Input.GetAxis("Horizontal"));
 
 
-        //movements();
 
         Debug.Log("RunPlayer es: " + animator.GetBool("RunPlayer"));
     }
@@ -52,10 +52,10 @@ public class control : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f; //Mirar si el 90 es correcto
         rb.rotation = angle;
-        
+
 
     }
-   
+
 
     void movements()
     {
@@ -64,20 +64,35 @@ public class control : MonoBehaviour
 
         if (movement != Vector2.zero)
         {
-
-            if (movement.x < 0)
-            {
-                transform.localScale = new Vector2(0.5f, transform.localScale.y);
-                mirandoDerecha = false;
-            }
-            else if (movement.x > 0)
-            {
-                transform.localScale = new Vector2(0.5f, 0.5f);
-                mirandoDerecha = true;
-            }
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Magnitude", movement.magnitude);
+
+            if (movement.x < 0) //Pulso IZQUIERDA
+            {
+                if (mirandoDerecha == true) //VENGO DE MIRAR DERECHA
+                {
+                    transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+                    mirandoDerecha = false;
+                }
+                else //VENGO DE MIRAR IZQUIERDA
+                {
+                    mirandoDerecha = false;
+                }
+
+            }
+            else if (movement.x > 0) //Pulso DERECHA
+            {
+                if (mirandoDerecha == true) //VENGO DE MIRAR DERECHA
+                {
+                    mirandoDerecha = true;
+                }
+                else //VENGO DE MIRAR IZQUIERDA
+                {
+                    transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+                    mirandoDerecha = true;
+                }
+            }
 
             animator.SetBool("RunPlayer", true); //MOVEMENT STATE
         }
@@ -89,14 +104,5 @@ public class control : MonoBehaviour
         // transform.position = transform.position + movement * Time.deltaTime * velocidad;
     }
 
-    void GestionarOrientacion(float inputMovimiento)
-    {
-        if (mirandoDerecha == true && inputMovimiento < 0 || (mirandoDerecha == false && inputMovimiento > 0))
-        {
-            mirandoDerecha = !mirandoDerecha;
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-
-        }
-    }
 
 }
