@@ -457,6 +457,9 @@ MonoBehaviour:
   - character: 126
     prefab: {fileID: 7760081817672733398, guid: ca14ccff5caa3fe439c791d42da41692,
       type: 3}
+  - character: 101
+    prefab: {fileID: 4077430256946975238, guid: bd1085524c6c1bf48904ef073599909f,
+      type: 3}
   mapText: {fileID: 4900000, guid: 81b09ad522055cd48b95b5cd81483c5f, type: 3}
   mapText2: {fileID: 4900000, guid: 30e42fbe881939e42b43177fd64ee2ae, type: 3}
   currentPosition: {x: 0, y: 0}
