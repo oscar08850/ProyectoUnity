@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7760081817672733398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3, y: 0.64, z: -4.3611965}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,7 +44,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -138,16 +138,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7760081817672733398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6653630598566a4bad2811c4fd3bb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: af8584959cca7f241ba3bd015c5d1ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Chuck
-    sentenceList:
-    - Hello my name is Chuck
-    - How are you?
-    - 
-  dialoguePanel: {fileID: 0}
-  displayText: {fileID: 0}
-  typingSpeed: 0
-  speakSound: {fileID: 0}
+  health: 100
+  lapida: {fileID: 6857594658135930175, guid: 149e8d91293309b46a8b9dac2db1ec15, type: 3}

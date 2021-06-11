@@ -165,9 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3ef0d70aed5ee40af01e4e98991f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 6063304115723897408}
   cam: {fileID: 0}
   mirandoDerecha: 1
-  rb: {fileID: 0}
+  rb: {fileID: 6063304115723897412}
   force: {fileID: 0}
   moveSpeed: 5
 --- !u!114 &487022532710529459

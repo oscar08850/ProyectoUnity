@@ -7,6 +7,9 @@ moneda
 moneda
 30
 -8
+knight
+30
+-10
 enemigo
 3
 -11

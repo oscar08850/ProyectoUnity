@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4785019277091269833}
   - component: {fileID: 4277994930334280636}
   - component: {fileID: 5839366617686161996}
+  - component: {fileID: 8071124201223568704}
   - component: {fileID: 5833967516268947434}
   m_Layer: 0
   m_Name: Arrow
@@ -103,8 +104,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 2
+  m_CollisionDetection: 1
+  m_Constraints: 6
 --- !u!61 &5839366617686161996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,6 +132,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4746363, y: 0.31562385}
   m_EdgeRadius: 0
+--- !u!114 &8071124201223568704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130864611110902114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a62c2c8fcb2d9e4f94dfb36fd74ea12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!247 &5833967516268947434
 ConstantForce2D:
   m_ObjectHideFlags: 0
