@@ -12,6 +12,13 @@ public class control : MonoBehaviour
     public Camera cam;
     public bool mirandoDerecha = false;
 
+    //Variables de vida
+    public int maxHealth = 100;
+    public int currentHealth;
+    /////////////////
+
+    public Healthbar healthbar;
+    
 
     public Rigidbody2D rb;
     public ConstantForce2D force;
@@ -23,6 +30,9 @@ public class control : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         force = GetComponent<ConstantForce2D>();
         animator = GetComponent<Animator>();
+
+        currentHealth = maxHealth;
+        healthbar.SetMaxHealth(maxHealth);
     }
 
 
@@ -104,5 +114,10 @@ public class control : MonoBehaviour
         // transform.position = transform.position + movement * Time.deltaTime * velocidad;
     }
 
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthbar.SetHealth(currentHealth);
+    }
 
 }
