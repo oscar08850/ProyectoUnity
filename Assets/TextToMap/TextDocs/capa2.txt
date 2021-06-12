@@ -5,7 +5,7 @@ moneda
 30
 -6
 moneda
-30
+38
 -8
 knight
 30
