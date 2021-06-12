@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7760081817672733396}
   - component: {fileID: 7760081817672733397}
   - component: {fileID: 7059509995042710491}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Knight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -141,5 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8584959cca7f241ba3bd015c5d1ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visionRadius: 5
+  speed: 3
   health: 100
   lapida: {fileID: 6857594658135930175, guid: 149e8d91293309b46a8b9dac2db1ec15, type: 3}
+  player: {fileID: 0}
