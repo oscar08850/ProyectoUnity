@@ -32,6 +32,9 @@ public class KnightScript : MonoBehaviour
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist < visionRadius)
             target = player.transform.position;
+        if (animator.GetBool("knightDie") == true) {
+            target = this.transform.position;
+        }
         float fixedSpeed = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
     }

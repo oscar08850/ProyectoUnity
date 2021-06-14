@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7760081817672733396}
   - component: {fileID: 7760081817672733397}
   - component: {fileID: 7059509995042710491}
+  - component: {fileID: 4599739639950247815}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Enemy
@@ -141,8 +142,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8584959cca7f241ba3bd015c5d1ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRadius: 5
-  speed: 3
+  visionRadius: 50
+  speed: 7
   health: 100
   lapida: {fileID: 6857594658135930175, guid: 149e8d91293309b46a8b9dac2db1ec15, type: 3}
   player: {fileID: 0}
+--- !u!61 &4599739639950247815
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760081817672733398}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.011947453, y: -0.15531039}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5597998, y: 2.8739686}
+  m_EdgeRadius: 0
