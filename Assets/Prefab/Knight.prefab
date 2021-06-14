@@ -149,12 +149,14 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
+  contr: {fileID: 0}
   visionRadius: 1
   ataqueRadius: 1
   speed: 1
   health: 100
   lapida: {fileID: 6857594658135930175, guid: 149e8d91293309b46a8b9dac2db1ec15, type: 3}
   player: {fileID: 6063304115723897410, guid: 917cb6095572f1548924432c37f4ccad, type: 3}
+  attackRate: 0.02
 --- !u!114 &5083129302443396363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,8 +188,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &9091523499542862989
 GameObject:
   m_ObjectHideFlags: 0

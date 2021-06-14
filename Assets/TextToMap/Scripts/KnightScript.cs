@@ -22,12 +22,9 @@ public class KnightScript : MonoBehaviour
     public GameObject lapida;
     public GameObject player;
 
-<<<<<<< HEAD
-=======
     public float attackRate = 0.02f;
     float nextAttackTime = 0f;
 
->>>>>>> c4a40bfb26c10214e57caf131bd0b58f9eb40b2a
 
     private void Start()
     {
@@ -61,12 +58,10 @@ public class KnightScript : MonoBehaviour
 
         animator.SetBool("knightRun", true); //VOY HACIA EL PLAYER
 
-<<<<<<< HEAD
         target = player.transform.position;
         if (dist < attackRange)
         {
                 Attack();
-=======
             target = player.transform.position;
             if (dist < attackRange)
             {
@@ -76,7 +71,6 @@ public class KnightScript : MonoBehaviour
                     nextAttackTime = Time.time + 1f / attackRate;
                 }
             }
->>>>>>> c4a40bfb26c10214e57caf131bd0b58f9eb40b2a
         }
         else if (dist > visionRadius)
         {

@@ -1,24 +1,24 @@
 jugador
-0
--2
+12
+-9
 knight
-30
--10
+42
+-17
 enemigo
-3
--11
+15
+-18
 cartel
-65
--11
+77
+-18
 buzon
-32
--5
+44
+-12
 casa de Juan
 buzon
-54
--5
+66
+-12
 casa de Toni
 buzon
-43
--12
+55
+-19
 casa de Alex
