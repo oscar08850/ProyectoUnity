@@ -169,6 +169,10 @@ MonoBehaviour:
   movement: {x: 0, y: 0}
   cam: {fileID: 0}
   mirandoDerecha: 1
+  maxHealth: 100
+  currentHealth: 0
+  healthbar: {fileID: 1617245710467658691, guid: 2216b665b43c16b46a58d98d02cb9e42,
+    type: 3}
   rb: {fileID: 6063304115723897412}
   force: {fileID: 0}
   moveSpeed: 5

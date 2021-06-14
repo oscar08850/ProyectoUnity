@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6870625162923176722}
   - component: {fileID: 1164087614695459319}
   - component: {fileID: 5949117457696006599}
+  - component: {fileID: -7328517193054823281}
   m_Layer: 4
   m_Name: Cartel
   m_TagString: Fondo
@@ -108,3 +109,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &-7328517193054823281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666613958814719718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d41525975410644ac1871e71719d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentenceList: []
+  dialoguePanel: {fileID: 0}
+  displayText: {fileID: 0}
+  typingSpeed: 0
+  speakSound: {fileID: 0}

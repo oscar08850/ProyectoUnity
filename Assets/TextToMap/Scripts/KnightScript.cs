@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class KnightScript : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
->>>>>>> bd5eeb8ad2befd034b1b30dcd28f9874e23eca6f
     public float visionRadius;
     public float ataqueRadius;
     public float speed;
@@ -36,16 +33,12 @@ public class KnightScript : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
-=======
 
->>>>>>> bd5eeb8ad2befd034b1b30dcd28f9874e23eca6f
         Vector3 target = initialPosition;
         currentPosition = transform.position;
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist < visionRadius)
         {
-<<<<<<< HEAD
             target = player.transform.position;
             //animator.SetBool("knightRun", true);
             //animator.SetBool("knightAttack", false);
@@ -57,16 +50,14 @@ public class KnightScript : MonoBehaviour
             //animator.SetBool("knightAttack", true);
             //animator.SetBool("knightRun", false);
         }*/
-=======
-            mirarAlPlayer();
+        mirarAlPlayer();
 
-            animator.SetBool("knightRun", true); //VOY HACIA EL PLAYER
+        animator.SetBool("knightRun", true); //VOY HACIA EL PLAYER
 
-            target = player.transform.position;
-            if (dist < attackRange)
-            {
+        target = player.transform.position;
+        if (dist < attackRange)
+        {
                 Attack();
-            }
         }
         else if (dist > visionRadius)
         {
@@ -79,12 +70,9 @@ public class KnightScript : MonoBehaviour
         {
             target = this.transform.position; //La lapida se queda donde muere.
         }
->>>>>>> bd5eeb8ad2befd034b1b30dcd28f9874e23eca6f
         float fixedSpeed = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
-        
-
-        
+     
     }
 
     public void TakeDamage(int damage)
