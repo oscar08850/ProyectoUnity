@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class KnightScript : MonoBehaviour
 {
-
     public float visionRadius;
+    public float ataqueRadius;
     public float speed;
     Vector3 initialPosition;
     
@@ -15,6 +15,7 @@ public class KnightScript : MonoBehaviour
 
     public GameObject lapida;
     public GameObject player;
+
 
     private void Start()
     {
@@ -27,13 +28,26 @@ public class KnightScript : MonoBehaviour
 
     void Update()
     {
-        
         Vector3 target = initialPosition;
         float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist < visionRadius)
+        {
             target = player.transform.position;
+            //animator.SetBool("knightRun", true);
+            //animator.SetBool("knightAttack", false);
+        }
+            /*
+        else if (dist < ataqueRadius)
+        {
+            target = player.transform.position;
+            //animator.SetBool("knightAttack", true);
+            //animator.SetBool("knightRun", false);
+        }*/
         float fixedSpeed = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+        
+
+        
     }
 
     public void TakeDamage (int damage)
