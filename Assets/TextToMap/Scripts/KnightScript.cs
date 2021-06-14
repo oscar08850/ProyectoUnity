@@ -8,6 +8,7 @@ public class KnightScript : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    public control contr;
 
     public float visionRadius;
     public float ataqueRadius;
@@ -21,6 +22,12 @@ public class KnightScript : MonoBehaviour
     public GameObject lapida;
     public GameObject player;
 
+<<<<<<< HEAD
+=======
+    public float attackRate = 0.02f;
+    float nextAttackTime = 0f;
+
+>>>>>>> c4a40bfb26c10214e57caf131bd0b58f9eb40b2a
 
     private void Start()
     {
@@ -54,10 +61,22 @@ public class KnightScript : MonoBehaviour
 
         animator.SetBool("knightRun", true); //VOY HACIA EL PLAYER
 
+<<<<<<< HEAD
         target = player.transform.position;
         if (dist < attackRange)
         {
                 Attack();
+=======
+            target = player.transform.position;
+            if (dist < attackRange)
+            {
+                if (Time.time >= nextAttackTime)
+                {
+                    Attack();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
+            }
+>>>>>>> c4a40bfb26c10214e57caf131bd0b58f9eb40b2a
         }
         else if (dist > visionRadius)
         {
@@ -93,17 +112,20 @@ public class KnightScript : MonoBehaviour
     {
         animator.SetTrigger("knightAttack");
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
+        bool hit = false;
 
-        foreach (Collider2D enemy in hitEnemies)
+        foreach (Collider2D player in hitEnemies)
         {
-            Debug.Log("We hit:  " + enemy.name);
-
+            if (hitEnemies != null)
+                hit = true;
         }
+        if (hit)
+            contr.TakeDamage(10);
+
 
     }
-
 
     IEnumerator Die()
     {
