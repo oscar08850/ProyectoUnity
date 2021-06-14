@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 211614792}
   - component: {fileID: 211614791}
   - component: {fileID: 211614790}
+  - component: {fileID: 211614793}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -174,7 +175,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -204,6 +205,20 @@ Transform:
   m_Father: {fileID: 657473874}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &211614793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211614789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efda35706451ef40aaf299c9365d56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 6063304115723897413, guid: 917cb6095572f1548924432c37f4ccad, type: 3}
+  suavidadCamara: 0.15
 --- !u!1 &657473873
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +287,21 @@ MonoBehaviour:
       type: 3}
   - character: 57
     prefab: {fileID: 2564987987829555639, guid: 8c69ee1c3090baf48896d5d8dbd04cbd,
+      type: 3}
+  - character: 43
+    prefab: {fileID: 6063304115723897410, guid: 917cb6095572f1548924432c37f4ccad,
+      type: 3}
+  - character: 66
+    prefab: {fileID: 3248566845131300276, guid: dc2569c4fbaf87e4aa1ad09a7878962d,
+      type: 3}
+  - character: 49
+    prefab: {fileID: 6494711027243325908, guid: d089db574365aae4aa86db61004cb40b,
+      type: 3}
+  - character: 52
+    prefab: {fileID: 1818066247912266244, guid: d0a64b308cf175c4f9ddd11bf7c70541,
+      type: 3}
+  - character: 55
+    prefab: {fileID: 6640482607929195887, guid: 3fdd44c2749ce684582e1cad717b7bd6,
       type: 3}
   mapText: {fileID: 4900000, guid: d928ecea4199c864ca3e927f8ee81c06, type: 3}
   mapText2: {fileID: 4900000, guid: 0d0d3d37f6d5c9245a5549e72f10c387, type: 3}
