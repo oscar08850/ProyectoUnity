@@ -49,9 +49,6 @@ public class control : MonoBehaviour
 
         //GestionarOrientacion(Input.GetAxis("Horizontal"));
 
-
-
-        Debug.Log("RunPlayer es: " + animator.GetBool("RunPlayer"));
     }
 
 
@@ -114,7 +111,7 @@ public class control : MonoBehaviour
         // transform.position = transform.position + movement * Time.deltaTime * velocidad;
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
