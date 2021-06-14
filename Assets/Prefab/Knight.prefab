@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7760081817672733397}
   - component: {fileID: 7059509995042710491}
   - component: {fileID: 4599739639950247815}
+  - component: {fileID: 5083129302443396363}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Enemy
@@ -31,7 +32,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7105463263128453993}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -142,8 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8584959cca7f241ba3bd015c5d1ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRadius: 50
-  speed: 7
+  attackPoint: {fileID: 7105463263128453993}
+  attackRange: 1.37
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  visionRadius: 5
+  speed: 1
   health: 100
   lapida: {fileID: 6857594658135930175, guid: 149e8d91293309b46a8b9dac2db1ec15, type: 3}
   player: {fileID: 0}
@@ -173,3 +180,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5597998, y: 2.8739686}
   m_EdgeRadius: 0
+--- !u!114 &5083129302443396363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760081817672733398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195122c8a7c1da9448f8c4312f0f70ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &9091523499542862989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7105463263128453993}
+  m_Layer: 0
+  m_Name: ArrackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7105463263128453993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091523499542862989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.08, y: -0.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7760081817672733394}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
