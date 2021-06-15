@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7768314096197672698}
   - component: {fileID: 7382381439285158961}
   - component: {fileID: 1654559077579520934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Agua
   m_TagString: Fondo
   m_Icon: {fileID: 0}

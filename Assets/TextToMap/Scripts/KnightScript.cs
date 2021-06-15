@@ -26,6 +26,7 @@ public class KnightScript : MonoBehaviour
     float nextAttackTime = 0f;
 
 
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -37,7 +38,6 @@ public class KnightScript : MonoBehaviour
 
     void Update()
     {
-
         Vector3 target = initialPosition;
         currentPosition = transform.position;
         float dist = Vector3.Distance(player.transform.position, transform.position);
