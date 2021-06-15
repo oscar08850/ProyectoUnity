@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efda35706451ef40aaf299c9365d56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 6063304115723897413, guid: 917cb6095572f1548924432c37f4ccad, type: 3}
+  target: {fileID: 0}
   suavidadCamara: 0.15
 --- !u!1 &657473873
 GameObject:
@@ -292,7 +292,7 @@ MonoBehaviour:
     prefab: {fileID: 6063304115723897410, guid: 917cb6095572f1548924432c37f4ccad,
       type: 3}
   - character: 66
-    prefab: {fileID: 3248566845131300276, guid: dc2569c4fbaf87e4aa1ad09a7878962d,
+    prefab: {fileID: 2649966178004776824, guid: 6c14b259363fc0b4eaa117950bc12f4d,
       type: 3}
   - character: 49
     prefab: {fileID: 6494711027243325908, guid: d089db574365aae4aa86db61004cb40b,

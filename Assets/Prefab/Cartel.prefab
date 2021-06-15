@@ -123,7 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: 
-    sentenceList: []
+    sentenceList:
+    - Encuentra las 6 llaves para luchar contra el profesor
   dialoguePanel: {fileID: 0}
   displayText: {fileID: 0}
   typingSpeed: 0

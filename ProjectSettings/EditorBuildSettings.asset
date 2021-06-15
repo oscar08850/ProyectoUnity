@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel2.unity
     guid: 1c8251d535c12a64487cbd5cc03c1d65
   - enabled: 1
-    path: Assets/Scenes/Casa.unity
+    path: Assets/Scenes/Casa1.unity
     guid: e699c8f095c33ae4fba56abb2939b413
+  - enabled: 1
+    path: Assets/Scenes/Casa2.unity
+    guid: 8dc6dd77088a60f46acda5f5194c8311
+  - enabled: 1
+    path: Assets/Scenes/Casa3.unity
+    guid: 0f69a161c0ec77c4b8250295866e3212
   m_configObjects: {}
