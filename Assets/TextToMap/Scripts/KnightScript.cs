@@ -32,59 +32,13 @@ public class KnightScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         initialPosition = transform.position;
         animator = GetComponent<Animator>();
-        animator.SetBool("knightDie", false); //TOY VIVO
+        //animator.SetBool("knightDie", false); //TOY VIVO
 
     }
 
     void Update()
     {
-        Vector3 target = initialPosition;
-        currentPosition = transform.position;
-        float dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist < visionRadius)
-        {
-            target = player.transform.position;
-            //animator.SetBool("knightRun", true);
-            //animator.SetBool("knightAttack", false);
-        }
-            /*
-        else if (dist < ataqueRadius)
-        {
-            target = player.transform.position;
-            //animator.SetBool("knightAttack", true);
-            //animator.SetBool("knightRun", false);
-        }*/
-        mirarAlPlayer();
-
-        animator.SetBool("knightRun", true); //VOY HACIA EL PLAYER
-
-        target = player.transform.position;
-        if (dist < attackRange)
-        {
-                Attack();
-            target = player.transform.position;
-            if (dist < attackRange)
-            {
-                if (Time.time >= nextAttackTime)
-                {
-                    Attack();
-                    nextAttackTime = Time.time + 1f / attackRate;
-                }
-            }
-        }
-        else if (dist > visionRadius)
-        {
-            if (currentPosition == initialPosition)
-            {
-                animator.SetBool("knightRun", false); //Estoy donde empiezo asi que IDLE
-            }
-        }
-        if (animator.GetBool("knightDie") == true)
-        {
-            target = this.transform.position; //La lapida se queda donde muere.
-        }
-        float fixedSpeed = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+        comportamiento();
      
     }
 
@@ -95,7 +49,9 @@ public class KnightScript : MonoBehaviour
 
         if (health <= 0)
         {
-            animator.SetBool("knightDie", true); //MOVEMENT STATE
+            animator.SetTrigger("knightDie");
+
+            // animator.SetBool("knightDie", true); //MOVEMENT STATE
 
             StartCoroutine(Die());
 
@@ -124,7 +80,7 @@ public class KnightScript : MonoBehaviour
     IEnumerator Die()
     {
         Destroy(gameObject, 2f);
-        yield return new WaitForSeconds(1.99f);
+        yield return new WaitForSecondsRealtime (1.8f);
         DropLapida();
 
     }
@@ -153,4 +109,47 @@ public class KnightScript : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
 
     }
+
+
+    public void comportamiento() {
+        Vector3 target = initialPosition;
+        currentPosition = transform.position;
+        float dist = Vector3.Distance(player.transform.position, transform.position);
+
+        if (dist < visionRadius)
+        {
+            target = player.transform.position;
+            animator.SetBool("knightRun", true);
+            mirarAlPlayer();
+            //animator.SetBool("knightAttack", false);
+        }
+        else { //dist > visionRadius  // Player fuera de rango de vision
+            target = initialPosition;
+            if (currentPosition == initialPosition)
+            {
+                animator.SetBool("knightRun", false);
+            }
+        }
+
+
+        if (dist < attackRange)
+        {
+            if (Time.time >= nextAttackTime)
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+        }
+
+        
+        if (health <= 0)
+        {
+            target = this.transform.position; //La lapida se queda donde muere.
+        }
+        float fixedSpeed = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+
+    }
+
+
 }

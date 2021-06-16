@@ -47,7 +47,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -145,14 +145,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 7105463263128453993}
-  attackRange: 1.37
+  attackRange: 1.13
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
   contr: {fileID: 0}
-  visionRadius: 1
-  ataqueRadius: 1
-  speed: 1
+  visionRadius: 4.24
+  ataqueRadius: 1.72
+  speed: 2.05
   health: 100
   lapida: {fileID: 6857594658135930175, guid: 149e8d91293309b46a8b9dac2db1ec15, type: 3}
   player: {fileID: 6063304115723897410, guid: 917cb6095572f1548924432c37f4ccad, type: 3}
@@ -189,7 +189,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!1 &9091523499542862989
 GameObject:
   m_ObjectHideFlags: 0
