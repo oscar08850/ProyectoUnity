@@ -10,6 +10,7 @@ public class ExitScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(0);
+            
         }
     }
 }

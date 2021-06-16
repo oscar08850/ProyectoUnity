@@ -18,6 +18,7 @@ public class control : MonoBehaviour
     /////////////////
 
     public Healthbar healthbar;
+    ScoreManager score;
     
 
     public Rigidbody2D rb;
@@ -117,4 +118,11 @@ public class control : MonoBehaviour
         healthbar.SetHealth(currentHealth);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Coin") {
+            score.RaiseScore(1);
+
+        }
+    }
 }
