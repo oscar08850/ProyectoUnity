@@ -72,6 +72,7 @@ public class KnightScript : MonoBehaviour
                 hit = true;
         }
         if (hit)
+            
             contr.TakeDamage(10);
 
 

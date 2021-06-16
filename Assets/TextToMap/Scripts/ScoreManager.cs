@@ -24,14 +24,7 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        Debug.Log("ESTO ES: gameobject " + gameobject);
-        Debug.Log("HELLO");
 
-        Debug.Log("ESTO ES: TEXT " + scoreText.GetComponent<Text>());
-
-    }
 
     public void RaiseScore(int s)
     {
