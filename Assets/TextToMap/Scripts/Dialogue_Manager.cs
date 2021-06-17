@@ -20,7 +20,14 @@ public class Dialogue_Manager : MonoBehaviour
     public AudioClip speakSound;
 
     string[] frase = new string[2];
-    
+
+
+    private void Awake()
+    {
+        dialoguePanel = GameObject.FindGameObjectWithTag("Image");
+        displayText = GameObject.FindGameObjectWithTag("DisplayText").GetComponent<TextMeshProUGUI>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +36,14 @@ public class Dialogue_Manager : MonoBehaviour
         dialogue.sentenceList = frase;
         sentences = new Queue<string>();
         myAudio = GetComponent<AudioSource>();
+      
+        dialoguePanel.SetActive(false);
+    }
+
+
+    private void Update()
+    {
+        
     }
 
     void StartDialogue()

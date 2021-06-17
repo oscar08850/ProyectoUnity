@@ -13,7 +13,8 @@ public class llave3 : MonoBehaviour
         if (player != null)
         {
             // ACTIVAR BOOL
-            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetTrue(3);
+            if (!GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetKey(3))
+                GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetTrue(3);
 
             //Destruir llave
             Destroy(gameObject);

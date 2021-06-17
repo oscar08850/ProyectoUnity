@@ -16,6 +16,12 @@ TagManager:
   - HealthBar
   - ContadorEnemigos
   - Time
+  - Llave1
+  - Llave2
+  - Llave3
+  - Llave4
+  - Llave5
+  - Llave6
   layers:
   - Default
   - TransparentFX

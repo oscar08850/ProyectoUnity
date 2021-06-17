@@ -8,7 +8,8 @@ public class BarcaScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Vector2 playerPosition = new Vector2(0, 0);
-        if (collision.gameObject.tag == "Player")
+        
+        if (collision.gameObject.tag == "Player" && GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetTrip())
         {
             GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetPlayerPosition(playerPosition = new Vector2(10, -14));
             SceneManager.LoadScene(1);
