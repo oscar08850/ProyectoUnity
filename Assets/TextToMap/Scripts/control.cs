@@ -28,23 +28,10 @@ public class control : MonoBehaviour
 
     void Start()
     {
-      //  GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
-
-       // healthbar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Healthbar>();
-
 
         rb = GetComponent<Rigidbody2D>();
         force = GetComponent<ConstantForce2D>();
         animator = GetComponent<Animator>();
-
-
-        //currentHealth = maxHealth;
-        //currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth();
-
-       //healthbar.SetHealth( GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth());
-
-
-        //healthbar.SetMaxHealth(maxHealth);
 
     }
 
@@ -59,7 +46,6 @@ public class control : MonoBehaviour
         currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth();
 
         GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
-        //GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
 
 
         healthbar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Healthbar>();
@@ -132,10 +118,7 @@ public class control : MonoBehaviour
     public void TakeDamage(int damage)
     {
 
-        //currentHealth -= damage;
         currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetHealthDamage(damage);
-
-
         healthbar.SetHealth(currentHealth);
     }
 
@@ -144,9 +127,6 @@ public class control : MonoBehaviour
         if (collision.tag == "Coin") {
             GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().AddMonedas(1);
             GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
-
-            //score.RaiseScore(1);
-
         }
     }
 }
