@@ -2,19 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
 
 public class TextToMap : MonoBehaviour
 {
     public TextMapping[] mappingData;
     public TextAsset mapText;
     public TextAsset mapText2;
-
     public Vector2 currentPosition = new Vector2(0, 0);
 
     // Start is called before the first frame update
     void Start()
     {
         GenerateMap();
+        currentPosition = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetPlayerPosition();
+        char c = '+';
+        foreach (TextMapping tm in mappingData)
+        {
+            if (c == tm.character)
+            {
+                Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+            }
+        }
+
     }
 
     private void GenerateMap()
@@ -113,6 +123,30 @@ public class TextToMap : MonoBehaviour
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
                 c = '~';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+            else if (filas[i] == "tinaja")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = 't';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+            else if (filas[i] == "tinajaRompe")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = 'T';
                 foreach (TextMapping tm in mappingData)
                 {
                     if (c == tm.character)

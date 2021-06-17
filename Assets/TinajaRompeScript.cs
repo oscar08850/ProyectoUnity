@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TinajaScript : MonoBehaviour
+public class TinajaRompeScript : MonoBehaviour
 {
     public int health = 50;
 
@@ -24,7 +24,13 @@ public class TinajaScript : MonoBehaviour
     {
         Destroy(gameObject, 2f);
         yield return new WaitForSecondsRealtime(0f);
+        DropLlave();
 
     }
 
+    void DropLlave()
+    {
+        Vector2 position = transform.position;
+        Instantiate(llave, position, Quaternion.identity);
+    }
 }

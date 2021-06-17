@@ -1,6 +1,3 @@
-jugador
-12
--9
 knight
 42
 -17

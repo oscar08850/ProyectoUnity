@@ -8,6 +8,11 @@ TagManager:
   - Fondo
   - Coin
   - ContadorMonedas
+  - GameObject
+  - Exit
+  - EstadoJuego
+  - Image
+  - DisplayText
   layers:
   - Default
   - TransparentFX

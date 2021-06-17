@@ -20,6 +20,7 @@ public class KnightScript : MonoBehaviour
     Animator animator;
 
     public GameObject lapida;
+    public GameObject llave;
     public GameObject player;
 
     public float attackRate = 0.02f;
@@ -83,6 +84,7 @@ public class KnightScript : MonoBehaviour
         Destroy(gameObject, 2f);
         yield return new WaitForSecondsRealtime (1.8f);
         DropLapida();
+        DropLlave();
 
     }
 
@@ -90,6 +92,12 @@ public class KnightScript : MonoBehaviour
     {
         Vector2 position = transform.position;
         Instantiate(lapida, position, Quaternion.identity);
+    }
+
+    void DropLlave()
+    {
+        Vector2 position = transform.position;
+        Instantiate(llave, position, Quaternion.identity);
     }
 
     private void OnDrawGizmosSelected()

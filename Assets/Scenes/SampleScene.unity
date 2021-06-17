@@ -299,6 +299,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1476696607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476696609}
+  - component: {fileID: 1476696608}
+  m_Layer: 0
+  m_Name: EstadoJuego
+  m_TagString: EstadoJuego
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1476696608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476696607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af149aab8630e64bab6f1a0d3455cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPosition: {x: 12, y: -9}
+--- !u!4 &1476696609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476696607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.148841, y: 23.193253, z: -5.6660156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1590685460
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +355,7 @@ GameObject:
   - component: {fileID: 1590685461}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: GameObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -712,6 +756,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6665029509034612680, guid: 594d9062d32a800418bb5e7163fb3edf,
+        type: 3}
+      propertyPath: m_TagString
+      value: DisplayText
+      objectReference: {fileID: 0}
     - target: {fileID: 6665029509034612686, guid: 594d9062d32a800418bb5e7163fb3edf,
         type: 3}
       propertyPath: m_fontSize
@@ -861,6 +910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665029509811584813, guid: 594d9062d32a800418bb5e7163fb3edf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Image
       objectReference: {fileID: 0}
     - target: {fileID: 6665029509811584819, guid: 594d9062d32a800418bb5e7163fb3edf,
         type: 3}

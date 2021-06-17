@@ -12,17 +12,23 @@ public class ArrowScript : MonoBehaviour
         Debug.Log("collide (name) : " + collision.collider.gameObject.name);
         Debug.Log("collide (tag) : " + collision.collider.gameObject.tag);
         Destroy(gameObject, 2f);
-
     }
 
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         KnightScript knight = hitInfo.GetComponent<KnightScript>();
-        Debug.Log(hitInfo.name);
+        TinajaScript tinaja = hitInfo.GetComponent<TinajaScript>();
+        TinajaRompeScript tinajaRompe = hitInfo.GetComponent<TinajaRompeScript>();
+        Debug.Log("HIT INFO" + hitInfo.name);
         if (knight != null)
         {
             knight.TakeDamage(damage);
+        }
+        else if (tinaja != null)
+        {
+            Debug.Log("ADIOS");
+            tinaja.TakeDamage(damage);
         }
         Destroy(gameObject, 0f);
     }

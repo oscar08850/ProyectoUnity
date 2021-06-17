@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5591380589473417971}
   m_Layer: 0
   m_Name: Exit
-  m_TagString: Fondo
+  m_TagString: Exit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,3 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58818f82b361b5a489a286411f9abe65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  position: {x: 12, y: -9}

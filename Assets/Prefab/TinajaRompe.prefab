@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8729553017406900766}
   - component: {fileID: 5835501921787695759}
   - component: {fileID: 8540239988049874276}
+  - component: {fileID: 4593813554031859133}
   m_Layer: 0
   m_Name: TinajaRompe
   m_TagString: Untagged
@@ -108,3 +109,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &4593813554031859133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3380589407460599126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef43808f5c366f46bfa23579e85f40e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  llave: {fileID: 2303471488167363650, guid: da04b560c2970dc48973810f7220a3f1, type: 3}

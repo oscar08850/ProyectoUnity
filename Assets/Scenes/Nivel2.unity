@@ -304,5 +304,5 @@ MonoBehaviour:
     prefab: {fileID: 6640482607929195887, guid: 3fdd44c2749ce684582e1cad717b7bd6,
       type: 3}
   mapText: {fileID: 4900000, guid: d928ecea4199c864ca3e927f8ee81c06, type: 3}
-  mapText2: {fileID: 4900000, guid: 0d0d3d37f6d5c9245a5549e72f10c387, type: 3}
+  mapText2: {fileID: 4900000, guid: 4159bcef07b585e42a97b99c728f5bf0, type: 3}
   currentPosition: {x: 0, y: 0}

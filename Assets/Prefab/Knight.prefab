@@ -155,6 +155,7 @@ MonoBehaviour:
   speed: 2.05
   health: 100
   lapida: {fileID: 6857594658135930175, guid: 149e8d91293309b46a8b9dac2db1ec15, type: 3}
+  llave: {fileID: 166527938809756441, guid: 49439d2b5a69f9a49ac17c5fcb3d4bc2, type: 3}
   player: {fileID: 6063304115723897410, guid: 917cb6095572f1548924432c37f4ccad, type: 3}
   attackRate: 0.02
 --- !u!114 &5083129302443396363
