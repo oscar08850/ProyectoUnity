@@ -6,12 +6,11 @@ using UnityEngine;
 public class KnightScript : MonoBehaviour
 {
     public Transform attackPoint;
-    public float attackRange = 0.5f;
+    public float attackRange = 1.5f;
     public LayerMask enemyLayers;
     public control contr;
 
     public float visionRadius;
-    public float ataqueRadius;
     public float speed;
     Vector3 initialPosition;
     Vector3 currentPosition;
@@ -23,13 +22,14 @@ public class KnightScript : MonoBehaviour
     public GameObject llave;
     public GameObject player;
 
-    public float attackRate = 0.02f;
+    public float attackRate = 0.5f;
     float nextAttackTime = 0f;
 
 
 
     private void Start()
     {
+        contr = GameObject.FindGameObjectWithTag("Player").GetComponent<control>();
         player = GameObject.FindGameObjectWithTag("Player");
         initialPosition = transform.position;
         animator = GetComponent<Animator>();

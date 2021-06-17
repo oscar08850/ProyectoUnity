@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7059509995042710491}
   - component: {fileID: 5083129302443396363}
   - component: {fileID: 6339148353496210636}
+  - component: {fileID: 1700965664518920517}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Enemy
@@ -50,7 +51,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03536582, y: -0.16356659}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -61,7 +62,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.4420726, y: 2.8478642}
   m_EdgeRadius: 0
 --- !u!212 &7760081817672733396
 SpriteRenderer:
@@ -145,19 +146,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 7105463263128453993}
-  attackRange: 1.13
+  attackRange: 1.24
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
   contr: {fileID: 0}
   visionRadius: 4.24
-  ataqueRadius: 1.72
   speed: 2.05
   health: 100
   lapida: {fileID: 6857594658135930175, guid: 149e8d91293309b46a8b9dac2db1ec15, type: 3}
   llave: {fileID: 166527938809756441, guid: 49439d2b5a69f9a49ac17c5fcb3d4bc2, type: 3}
   player: {fileID: 6063304115723897410, guid: 917cb6095572f1548924432c37f4ccad, type: 3}
-  attackRate: 0.02
+  attackRate: 0.5
 --- !u!114 &5083129302443396363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +191,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!61 &1700965664518920517
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760081817672733398}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03764963, y: -0.15060186}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3047624, y: 2.7605762}
+  m_EdgeRadius: 0
 --- !u!1 &9091523499542862989
 GameObject:
   m_ObjectHideFlags: 0

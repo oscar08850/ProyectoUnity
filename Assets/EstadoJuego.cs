@@ -70,10 +70,14 @@ public class EstadoJuego : MonoBehaviour
         return this.health;
     }
 
-    public void SetHealth(int health)
+    public int SetHealthDamage(int damage)
     {
-        this.health = health;
+        this.health = this.health - damage;
+        return this.health;
     }
+
+
+
 
     //PowerFlecha
 

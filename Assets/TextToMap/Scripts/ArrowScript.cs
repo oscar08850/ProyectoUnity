@@ -20,19 +20,28 @@ public class ArrowScript : MonoBehaviour
         KnightScript knight = hitInfo.GetComponent<KnightScript>();
         TinajaScript tinaja = hitInfo.GetComponent<TinajaScript>();
         TinajaRompeScript tinajaRompe = hitInfo.GetComponent<TinajaRompeScript>();
+        CoinController moneda = hitInfo.GetComponent<CoinController>();
         Debug.Log("HIT INFO" + hitInfo.name);
         if (knight != null)
         {
             knight.TakeDamage(damage);
+            Destroy(gameObject, 0f);
+
         }
         else if (tinaja != null)
         {
             tinaja.TakeDamage(damage);
+            Destroy(gameObject, 0f);
+
         }
         else if (tinajaRompe != null)
         {
             tinajaRompe.TakeDamage(damage);
+            Destroy(gameObject, 0f);
+
         }
-        Destroy(gameObject, 0f);
+        else {
+
+        }
     }
 }

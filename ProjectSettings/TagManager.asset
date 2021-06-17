@@ -13,6 +13,7 @@ TagManager:
   - EstadoJuego
   - Image
   - DisplayText
+  - HealthBar
   layers:
   - Default
   - TransparentFX

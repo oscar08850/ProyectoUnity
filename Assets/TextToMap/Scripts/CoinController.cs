@@ -5,7 +5,7 @@ using UnityEngine;
 public class CoinController : MonoBehaviour
 {
     public ScoreManager scoreManager;
-
+    //GameObject player;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -13,8 +13,14 @@ public class CoinController : MonoBehaviour
 
         //ScoreManager.scoreManager.RaiseScore(1);
         //GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().AddMonedas(1);
-        Destroy(gameObject);
+        //player = GameObject.FindGameObjectWithTag("Player");
+        control player = collision.GetComponent<control>();
 
+
+        if (player != null)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

@@ -30,12 +30,21 @@ public class control : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
 
+       // healthbar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Healthbar>();
+
+
         rb = GetComponent<Rigidbody2D>();
         force = GetComponent<ConstantForce2D>();
         animator = GetComponent<Animator>();
 
-        currentHealth = maxHealth;
-        healthbar.SetMaxHealth(maxHealth);
+
+        //currentHealth = maxHealth;
+        //currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth();
+
+       //healthbar.SetHealth( GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth());
+
+
+        //healthbar.SetMaxHealth(maxHealth);
 
     }
 
@@ -44,8 +53,15 @@ public class control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         transform.rotation = Quaternion.identity;
         movements();
+        currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth();
+
+        healthbar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Healthbar>();
+        healthbar.SetHealth(GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth());
+
+
 
     }
 
@@ -111,7 +127,11 @@ public class control : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+
+        //currentHealth -= damage;
+        currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetHealthDamage(damage);
+
+
         healthbar.SetHealth(currentHealth);
     }
 
