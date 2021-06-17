@@ -15,16 +15,13 @@ public class TinajaScript : MonoBehaviour
 
         if (health <= 0)
         {
-            StartCoroutine(Die());
-
+            Die();
         }
     }
 
-    IEnumerator Die()
+    void Die()
     {
-        Destroy(gameObject, 2f);
-        yield return new WaitForSecondsRealtime(0f);
-
+        Destroy(gameObject);
     }
 
 }

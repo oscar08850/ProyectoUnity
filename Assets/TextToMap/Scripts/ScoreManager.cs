@@ -11,26 +11,25 @@ public class ScoreManager : MonoBehaviour
     public GameObject gameobject;
 
 
-    int score = 0;
+
 
     private void Start()
     {
         scoreManager = this;
-        //player = GameObject.FindGameObjectWithTag("Player");
-        //scoreText = scoreText.GetComponent<Text>();
 
         gameobject = GameObject.FindGameObjectWithTag("ContadorMonedas");
+
         scoreText = gameobject.GetComponent<Text>();
+        scoreText.text = scoreText.text = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetMonedas() + "";
+
 
     }
 
 
 
-    public void RaiseScore(int s)
+    public void PintarScore()
     {
-        score += s;
-        scoreText.text = score + "";
-        Debug.Log(score);
+        scoreText.text = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetMonedas() + "";
     }
 
 

@@ -284,6 +284,9 @@ MonoBehaviour:
   - character: 54
     prefab: {fileID: 8747648907448122522, guid: 798d0706d1abe0a4280a7d8c7085f4b4,
       type: 3}
+  - character: 38
+    prefab: {fileID: 8617997963668739117, guid: a225478c90f2a3344a7fd7b463cac32c,
+      type: 3}
   mapText: {fileID: 4900000, guid: af39571775593fb438dcf0861181bf38, type: 3}
   mapText2: {fileID: 4900000, guid: 4159bcef07b585e42a97b99c728f5bf0, type: 3}
   currentPosition: {x: 0, y: 0}

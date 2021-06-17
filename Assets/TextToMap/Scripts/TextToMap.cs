@@ -24,6 +24,8 @@ public class TextToMap : MonoBehaviour
                 Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
             }
         }
+        GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
+
 
     }
 
@@ -57,20 +59,8 @@ public class TextToMap : MonoBehaviour
         int i;
         for (i=0; i < filas.Length; i++)
         {
-            if (filas[i] == "jugador")
-            {
-                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
-                c = '+';
-                foreach (TextMapping tm in mappingData)
-                {
-                    if (c == tm.character)
-                    {
-                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
-                    }
-                }
-            }
-
-            else if (filas[i] == "enemigo")
+           
+            if (filas[i] == "enemigo")
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
                 c = 'k';

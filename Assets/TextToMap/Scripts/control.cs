@@ -28,12 +28,15 @@ public class control : MonoBehaviour
 
     void Start()
     {
+        GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
+
         rb = GetComponent<Rigidbody2D>();
         force = GetComponent<ConstantForce2D>();
         animator = GetComponent<Animator>();
 
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+
     }
 
 
@@ -42,13 +45,7 @@ public class control : MonoBehaviour
     void Update()
     {
         transform.rotation = Quaternion.identity;
-        //movement.x = Input.GetAxisRaw("Horizontal");
-        //movement.y = Input.GetAxisRaw("Vertical");
         movements();
-
-        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        //GestionarOrientacion(Input.GetAxis("Horizontal"));
 
     }
 
@@ -121,7 +118,10 @@ public class control : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Coin") {
-            score.RaiseScore(1);
+            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().AddMonedas(1);
+            GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
+
+            //score.RaiseScore(1);
 
         }
     }

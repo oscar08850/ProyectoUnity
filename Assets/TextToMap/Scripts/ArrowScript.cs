@@ -27,8 +27,11 @@ public class ArrowScript : MonoBehaviour
         }
         else if (tinaja != null)
         {
-            Debug.Log("ADIOS");
             tinaja.TakeDamage(damage);
+        }
+        else if (tinajaRompe != null)
+        {
+            tinajaRompe.TakeDamage(damage);
         }
         Destroy(gameObject, 0f);
     }

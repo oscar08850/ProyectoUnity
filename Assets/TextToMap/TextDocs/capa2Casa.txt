@@ -1,3 +1,6 @@
+moneda
+6
+-7
 tinaja
 1
 -7

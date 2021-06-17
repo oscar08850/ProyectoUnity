@@ -1,6 +1,3 @@
-jugador
-12
--9
 moneda
 41
 -15

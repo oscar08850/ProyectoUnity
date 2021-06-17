@@ -223,6 +223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPosition: {x: 12, y: -9}
+  monedas: 0
+  health: 100
+  powerFlecha: 40
 --- !u!4 &1476696609
 Transform:
   m_ObjectHideFlags: 0
@@ -392,7 +395,7 @@ MonoBehaviour:
     prefab: {fileID: 4542121263724074852, guid: 3490abb027490844db50c86c22b4a243,
       type: 3}
   mapText: {fileID: 4900000, guid: 81b09ad522055cd48b95b5cd81483c5f, type: 3}
-  mapText2: {fileID: 4900000, guid: 51eb5117119056342a95a928ba69605b, type: 3}
+  mapText2: {fileID: 4900000, guid: 30e42fbe881939e42b43177fd64ee2ae, type: 3}
   currentPosition: {x: 0, y: 0}
 --- !u!4 &1590685462
 Transform:
@@ -534,6 +537,11 @@ PrefabInstance:
     - target: {fileID: 4419814339209469503, guid: d189ad23f9beaae4785d72d9b35a8bf0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999704636307631888, guid: d189ad23f9beaae4785d72d9b35a8bf0,
+        type: 3}
+      propertyPath: m_Text
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
