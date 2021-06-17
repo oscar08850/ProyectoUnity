@@ -301,7 +301,16 @@ MonoBehaviour:
   llave4: 0
   llave5: 0
   llave6: 0
+  lasNinasBonitasNoPaganDinero: 0
   muertos: 0
+  key1: {fileID: 0}
+  key2: {fileID: 0}
+  key3: {fileID: 0}
+  key4: {fileID: 0}
+  key5: {fileID: 0}
+  key6: {fileID: 0}
+  tiempo: 0
+  tiempoContador: 0
 --- !u!4 &1476696609
 Transform:
   m_ObjectHideFlags: 0
@@ -644,6 +653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 197.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493380090346589537, guid: d189ad23f9beaae4785d72d9b35a8bf0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llave1
       objectReference: {fileID: 0}
     - target: {fileID: 9166129997223542172, guid: d189ad23f9beaae4785d72d9b35a8bf0,
         type: 3}
