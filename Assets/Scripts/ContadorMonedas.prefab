@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8661778167069577593}
   - component: {fileID: 8661778167069577594}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ContadorMonedas
   m_TagString: ContadorMonedas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

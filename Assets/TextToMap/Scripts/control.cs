@@ -28,7 +28,7 @@ public class control : MonoBehaviour
 
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
+      //  GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
 
        // healthbar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Healthbar>();
 
@@ -57,6 +57,10 @@ public class control : MonoBehaviour
         transform.rotation = Quaternion.identity;
         movements();
         currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth();
+
+        GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
+        //GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
+
 
         healthbar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Healthbar>();
         healthbar.SetHealth(GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth());

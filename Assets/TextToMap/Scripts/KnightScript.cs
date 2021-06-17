@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class KnightScript : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class KnightScript : MonoBehaviour
     public float attackRange = 1.5f;
     public LayerMask enemyLayers;
     public control contr;
+    bool muerto = false;
+
 
     public float visionRadius;
     public float speed;
@@ -27,14 +31,14 @@ public class KnightScript : MonoBehaviour
 
 
 
+
+
     private void Start()
     {
         contr = GameObject.FindGameObjectWithTag("Player").GetComponent<control>();
         player = GameObject.FindGameObjectWithTag("Player");
         initialPosition = transform.position;
         animator = GetComponent<Animator>();
-        //animator.SetBool("knightDie", false); //TOY VIVO
-
     }
 
     void Update()
@@ -48,9 +52,10 @@ public class KnightScript : MonoBehaviour
         Debug.Log("Damage: " + damage + "health: " + health);
         health -= damage; //Resta Damage a Health
 
-        if (health <= 0)
+        if (health <= 0 && muerto == false)
         {
             animator.SetTrigger("knightDie");
+            muerto = true;
 
             // animator.SetBool("knightDie", true); //MOVEMENT STATE
 
@@ -82,8 +87,14 @@ public class KnightScript : MonoBehaviour
     IEnumerator Die()
     {
         Destroy(gameObject, 2f);
+        GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().AddMuertos(1);
+
         yield return new WaitForSecondsRealtime (1.8f);
+
         DropLapida();
+
+
+
         DropLlave();
 
     }
@@ -154,11 +165,26 @@ public class KnightScript : MonoBehaviour
         if (health <= 0)
         {
             target = this.transform.position; //La lapida se queda donde muere.
+
         }
         float fixedSpeed = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
