@@ -198,12 +198,7 @@ public class EstadoJuego : MonoBehaviour
         else if (llave == 3)
         {
             llave3 = true;
-            llave1= true;
-            //key1.SetActive(false);
-
-            key1.SetActive(true);
-
-            //key3.SetActive(true);
+            key3.SetActive(true);
 
         }
         else if (llave == 4)
