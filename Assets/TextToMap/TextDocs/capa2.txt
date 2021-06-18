@@ -31,3 +31,9 @@ buzon
 55
 -19
 casa de Alex
+barril
+70
+-13
+barrilRompe
+71
+-13
