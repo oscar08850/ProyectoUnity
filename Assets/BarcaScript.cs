@@ -13,7 +13,7 @@ public class BarcaScript : MonoBehaviour
         
         if (collision.gameObject.tag == "Player" && GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetTrip())
         {
-            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetPlayerPosition(playerPosition = new Vector2(12, -14));
+            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetPlayerPosition(playerPosition = new Vector2(10, -20));
             SceneManager.LoadScene(1);
         }
     }
