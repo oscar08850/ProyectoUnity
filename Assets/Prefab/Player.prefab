@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6063304115723897408}
+  speed: 0
   movement: {x: 0, y: 0}
   cam: {fileID: 0}
   mirandoDerecha: 1
@@ -175,7 +176,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   rb: {fileID: 6063304115723897412}
   force: {fileID: 0}
-  moveSpeed: 10
+  moveSpeed: 5
 --- !u!114 &487022532710529459
 MonoBehaviour:
   m_ObjectHideFlags: 0
