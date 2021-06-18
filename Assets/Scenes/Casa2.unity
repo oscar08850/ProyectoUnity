@@ -247,7 +247,7 @@ MonoBehaviour:
     prefab: {fileID: 1695658009272346768, guid: 32c8be5665f04d7458237c7fc9ae89dd,
       type: 3}
   - character: 116
-    prefab: {fileID: 1412322796527620714, guid: beb413caacdcbe64a88bb7b11cd3df49,
+    prefab: {fileID: 3278753243505969688, guid: beb413caacdcbe64a88bb7b11cd3df49,
       type: 3}
   - character: 84
     prefab: {fileID: 3380589407460599126, guid: 811f62a657fd23c4b9149757a15fa1a6,
@@ -270,7 +270,7 @@ MonoBehaviour:
     prefab: {fileID: 8747648907448122522, guid: 798d0706d1abe0a4280a7d8c7085f4b4,
       type: 3}
   mapText: {fileID: 4900000, guid: fa1711d2c2e74de419ff7587d12536c8, type: 3}
-  mapText2: {fileID: 4900000, guid: 4159bcef07b585e42a97b99c728f5bf0, type: 3}
+  mapText2: {fileID: 4900000, guid: 0e42c293a09cc2745a66c7038dc36b21, type: 3}
   currentPosition: {x: 0, y: 0}
 --- !u!4 &1269459205
 Transform:
