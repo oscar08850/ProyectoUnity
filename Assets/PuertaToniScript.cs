@@ -11,7 +11,7 @@ public class PuertaToniScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetPlayerPosition(playerPosition = new Vector2(1, -5));
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
         }
     }
 }
