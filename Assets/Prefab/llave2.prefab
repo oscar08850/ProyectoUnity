@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -2342452218223324492}
   - component: {fileID: 4760232697705015704}
   - component: {fileID: 1588344199237081033}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: llave2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

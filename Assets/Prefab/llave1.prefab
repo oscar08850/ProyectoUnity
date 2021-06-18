@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 378206488038874877}
   - component: {fileID: 7099339546221681708}
   - component: {fileID: 9208249490059468475}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: llave1
   m_TagString: Respawn
   m_Icon: {fileID: 0}

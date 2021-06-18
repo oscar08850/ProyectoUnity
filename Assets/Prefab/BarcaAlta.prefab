@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1884373192253670502}
   - component: {fileID: 8625587843225895717}
   - component: {fileID: 4679067892768525520}
+  - component: {fileID: 6414079299531134651}
   m_Layer: 0
   m_Name: BarcaAlta
   m_TagString: Untagged
@@ -154,3 +155,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b488e1ace00db943a2d70da71a3391c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6414079299531134651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655528879176302691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abfb083c755c2647aa9f7f503fd4148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key1: {fileID: 0}
+  key2: {fileID: 0}
+  key3: {fileID: 0}
+  key4: {fileID: 0}
+  key5: {fileID: 0}
+  key6: {fileID: 0}

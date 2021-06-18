@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef43808f5c366f46bfa23579e85f40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 20
   llave: {fileID: 2303471488167363650, guid: da04b560c2970dc48973810f7220a3f1, type: 3}

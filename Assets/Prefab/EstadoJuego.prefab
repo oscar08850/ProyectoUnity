@@ -51,12 +51,12 @@ MonoBehaviour:
   pocimaRoja: 10
   manzana: 10
   powerFlecha: 40
-  llave1: 1
-  llave2: 1
-  llave3: 1
-  llave4: 1
-  llave5: 1
-  llave6: 1
+  llave1: 0
+  llave2: 0
+  llave3: 0
+  llave4: 0
+  llave5: 0
+  llave6: 0
   lasNinasBonitasNoPaganDinero: 0
   muertos: 5
   key1: {fileID: 0}

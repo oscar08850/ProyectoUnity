@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -8412553084235233535}
   - component: {fileID: 5132150718917768374}
   - component: {fileID: -3285490641413610603}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: llave6
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -613,32 +613,32 @@ PrefabInstance:
     - target: {fileID: 2996519346853126607, guid: 0b011f978935e4245b7a14dc9ede13ec,
         type: 3}
       propertyPath: llave1
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2996519346853126607, guid: 0b011f978935e4245b7a14dc9ede13ec,
         type: 3}
       propertyPath: llave2
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2996519346853126607, guid: 0b011f978935e4245b7a14dc9ede13ec,
         type: 3}
       propertyPath: llave3
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2996519346853126607, guid: 0b011f978935e4245b7a14dc9ede13ec,
         type: 3}
       propertyPath: llave4
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2996519346853126607, guid: 0b011f978935e4245b7a14dc9ede13ec,
         type: 3}
       propertyPath: llave5
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2996519346853126607, guid: 0b011f978935e4245b7a14dc9ede13ec,
         type: 3}
       propertyPath: llave6
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2996519346853126640, guid: 0b011f978935e4245b7a14dc9ede13ec,
         type: 3}

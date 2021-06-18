@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7258388657405650004}
   - component: {fileID: 1622032137094654381}
-  m_Layer: 4
+  m_Layer: 11
   m_Name: Techo
   m_TagString: Fondo
   m_Icon: {fileID: 0}
