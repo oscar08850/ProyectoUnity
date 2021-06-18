@@ -1,11 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-
-public class ExitScript : MonoBehaviour
-
+public class LlaveScript : MonoBehaviour
 {
     public GameObject key1, key2, key3, key4, key5, key6;
 
@@ -43,6 +40,7 @@ public class ExitScript : MonoBehaviour
             key6.SetActive(true);
 
     }
+
     private void Update()
     {
         if (GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetKey(1))
@@ -58,31 +56,4 @@ public class ExitScript : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetKey(6))
             key6.SetActive(true);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Vector2 playerPosition = new Vector2(0, 0);
-        
-        if (collision.gameObject.tag == "Player")
-        {
-            if (SceneManager.GetSceneByName("Casa1").isLoaded == true)
-            {
-                GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetPlayerPosition(playerPosition = new Vector2(43, -13));
-                SceneManager.LoadScene(0);
-            }
-            else if (SceneManager.GetSceneByName("Casa2").isLoaded == true)
-            {
-                GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetPlayerPosition(playerPosition = new Vector2(54, -20));
-                SceneManager.LoadScene(0);
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetPlayerPosition(playerPosition = new Vector2(65, -13));
-                SceneManager.LoadScene(0);
-            }
-            
-            
-        }
-    }
-
 }

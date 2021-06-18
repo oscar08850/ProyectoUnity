@@ -50,14 +50,13 @@ public class EstadoJuego : MonoBehaviour
         key5.SetActive(false);
         key6.SetActive(false);
 
-        /*
+        
         if (llave1)
             key1.SetActive(true);
         if (llave2)
             key2.SetActive(true);
-        */
         if (llave3)
-            key1.SetActive(true);
+            key3.SetActive(true);
         if (llave4)
             key4.SetActive(true);
         if (llave5)
@@ -101,6 +100,19 @@ public class EstadoJuego : MonoBehaviour
     {
         tiempo += Time.deltaTime;
         tiempoContador = (int)tiempo;
+
+        if (llave1)
+            key1.SetActive(true);
+        if (llave2)
+            key2.SetActive(true);
+        if (llave3)
+            key3.SetActive(true);
+        if (llave4)
+            key4.SetActive(true);
+        if (llave5)
+            key5.SetActive(true);
+        if (llave6)
+            key6.SetActive(true);
     }
 
 

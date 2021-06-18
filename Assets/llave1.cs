@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class llave1 : MonoBehaviour
 {
-  
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,8 +16,8 @@ public class llave1 : MonoBehaviour
         if (player != null)
         {
             // ACTIVAR BOOL
-            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetTrue(1);
-            //GameObject.FindGameObjectWithTag("Llave1").SetActive(true);
+            if (!GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetKey(1))
+                GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetTrue(1);
 
             //Destruir llave
             Destroy(gameObject);

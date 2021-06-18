@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3705526210984484704}
   - component: {fileID: 2074080844251272480}
   - component: {fileID: 2699709879161064425}
+  - component: {fileID: 4866236373459430873}
   m_Layer: 0
   m_Name: BarrilRompe
   m_TagString: Untagged
@@ -123,3 +124,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   llave: {fileID: 166527938809756441, guid: 49439d2b5a69f9a49ac17c5fcb3d4bc2, type: 3}
+--- !u!114 &4866236373459430873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114499940481104764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaac6a06715cdc47aae7a5bb960b931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
