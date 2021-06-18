@@ -1,4 +1,7 @@
 moneda
+41
+-15
+moneda
 6
 -7
 tinaja

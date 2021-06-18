@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class control : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class control : MonoBehaviour
     public Camera cam;
     public bool mirandoDerecha = false;
 
+    public bool muerto = false;
+
     //Variables de vida
     public int maxHealth = 100;
     public int currentHealth;
@@ -19,7 +22,8 @@ public class control : MonoBehaviour
 
     public Healthbar healthbar;
     ScoreManager score;
-    
+
+    private Button button;
 
     public Rigidbody2D rb;
     public ConstantForce2D force;
@@ -42,18 +46,30 @@ public class control : MonoBehaviour
     {
 
         transform.rotation = Quaternion.identity;
-        movements();
         currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth();
-
-        GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
-
-
+        if (currentHealth <= 0 && muerto == false)
+        {
+            muerto = true;
+            animator.SetTrigger("PlayerDie");
+        }
+        else if (muerto == false)
+        {
+            movements();
+        }
         healthbar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Healthbar>();
         healthbar.SetHealth(GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth());
 
+        GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
 
+        //button = GameObject.FindGameObjectWithTag("PocimaRoja").GetComponent<Button>();
+        //button.onClick
 
     }
+
+
+
+
+    
 
 
     private void FixedUpdate()

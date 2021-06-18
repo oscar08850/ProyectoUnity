@@ -1,4 +1,7 @@
 moneda
+-50
+50
+moneda
 41
 -15
 moneda

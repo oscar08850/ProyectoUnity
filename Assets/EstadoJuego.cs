@@ -6,7 +6,13 @@ public class EstadoJuego : MonoBehaviour
 {
     public Vector2 playerPosition = new Vector2(12, -9);
     public int monedas = 0; // bbdd.monedas???
+    public int maxHealth = 100; //bbdd.MAXHEALTH
     public int health = 100; //bbdd.health???
+
+    public int pocimaAzul = 1; //BaseDatos
+    public int pocimaRoja = 1; //BaseDatos
+    public int manzana = 1; //BaseDatos
+
     public int powerFlecha = 40;
     public bool llave1, llave2, llave3, llave4, llave5, llave6, lasNinasBonitasNoPaganDinero;
     public int muertos = 5;
@@ -31,6 +37,8 @@ public class EstadoJuego : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        this.health = maxHealth;
 
         key1 = GameObject.FindGameObjectWithTag("Llave1");
         key2 = GameObject.FindGameObjectWithTag("Llave2");
@@ -242,6 +250,61 @@ public class EstadoJuego : MonoBehaviour
         }
         else
             return false;
+    }
+
+    public void PocimaAzul()
+    {
+        if (this.pocimaAzul > 0)
+        {
+            this.health = maxHealth;
+            this.pocimaAzul--;
+
+            //IF (this.pocimaAzul == 0)   ELSE BUTTON DISABLED
+
+        }
+
+
+
+        //Devolver a la base datos PocimaAzul--
+
+    }
+
+    public void PocimaRoja()
+    {
+        if (this.pocimaRoja > 0)
+        {
+            this.health = 75;
+            this.pocimaRoja--;
+
+            //IF (this.pocimaRoja == 0)   ELSE BUTTON DISABLED
+
+        }
+
+
+
+        //Devolver a la base datos PocimaAzul--
+
+    }
+
+    public void Manzana()
+    {
+        if (this.manzana > 0)
+        {
+            this.health = this.health + 20;
+            if (this.health > maxHealth)
+            {
+                this.health = maxHealth;
+            }
+            this.manzana--;
+
+            //IF (this.manzana == 0)   ELSE BUTTON DISABLED
+
+        }
+
+
+
+        //Devolver a la base datos PocimaAzul--
+
     }
 
 }

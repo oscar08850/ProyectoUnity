@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class BarcaScript : MonoBehaviour
 {
+    Vector2 playerPosition = new Vector2(0, 0);
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Vector2 playerPosition = new Vector2(0, 0);
         
         if (collision.gameObject.tag == "Player" && GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetTrip())
         {

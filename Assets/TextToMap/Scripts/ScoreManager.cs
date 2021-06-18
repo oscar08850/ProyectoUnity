@@ -58,9 +58,10 @@ public class ScoreManager : MonoBehaviour
 
     public void PintarScore()
     {
-        scoreText.text = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetMonedas() + "";
-        scoreMuertos.text = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetMuertos() + "";
         scoreTimer.text = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetTime() + "";
+        scoreMuertos.text = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetMuertos() + "";
+
+        scoreText.text = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetMonedas() + "";
 
     }
 

@@ -78,9 +78,18 @@ public class KnightScript : MonoBehaviour
                 hit = true;
         }
         if (hit)
-            
+        {
             contr.TakeDamage(10);
 
+            
+
+
+
+
+
+
+
+        }
 
     }
 
@@ -127,7 +136,15 @@ public class KnightScript : MonoBehaviour
         }
         else
             transform.eulerAngles = new Vector3(0, 0, 0);
-
+    }
+    public void noMirarAlPlayer()
+    {
+        if (player.transform.position.x - transform.position.x < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+            transform.eulerAngles = new Vector3(0, 180, 0);
     }
 
 
@@ -140,8 +157,16 @@ public class KnightScript : MonoBehaviour
         {
             target = player.transform.position;
             animator.SetBool("knightRun", true);
-            mirarAlPlayer();
-            //animator.SetBool("knightAttack", false);
+            if (GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth() <= 0)
+            {
+                noMirarAlPlayer();
+                target = initialPosition;
+                if (currentPosition == initialPosition)
+                {
+                    animator.SetBool("knightRun", false);
+                }
+            }
+            else mirarAlPlayer();
         }
         else { //dist > visionRadius  // Player fuera de rango de vision
             target = initialPosition;
@@ -159,6 +184,9 @@ public class KnightScript : MonoBehaviour
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
+
+
+
         }
 
         
