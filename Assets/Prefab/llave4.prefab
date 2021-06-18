@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 0
   m_Name: llave4
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 0970ec1cded539b45b632080914e6298, type: 3}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
