@@ -200,6 +200,9 @@ MonoBehaviour:
   - character: 54
     prefab: {fileID: 8747648907448122522, guid: 798d0706d1abe0a4280a7d8c7085f4b4,
       type: 3}
+  - character: 77
+    prefab: {fileID: 3386502625370974787, guid: 3160eb52f56a0254f8501f85f55ae150,
+      type: 3}
   mapText: {fileID: 4900000, guid: 15a0ccddbe32e3f448a05f36ce6fcf82, type: 3}
   mapText2: {fileID: 4900000, guid: 968e9e8fdbd90354eb2f1c82c1b95d96, type: 3}
   currentPosition: {x: 0, y: 0}

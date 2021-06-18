@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TinajaScript : MonoBehaviour
+public class TinajaLlaveScript : MonoBehaviour
 {
-    public int health = 50;
+    public int health = 20;
 
     public GameObject llave;
 
@@ -16,12 +16,19 @@ public class TinajaScript : MonoBehaviour
         if (health <= 0)
         {
             Die();
+
         }
     }
 
     void Die()
     {
         Destroy(gameObject);
+        DropLlave();
     }
 
+    void DropLlave()
+    {
+        Vector2 position = transform.position;
+        Instantiate(llave, position, Quaternion.identity);
+    }
 }

@@ -72,31 +72,6 @@ public class TextToMap : MonoBehaviour
                     }
                 }
             }
-
-            else if (filas[i] == "cartel")
-            {
-                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
-                c = 'c';
-                foreach (TextMapping tm in mappingData)
-                {
-                    if (c == tm.character)
-                    {
-                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
-                    }
-                }
-            }
-            else if (filas[i] == "buzon")
-            {
-                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
-                c = 'b';
-                foreach (TextMapping tm in mappingData)
-                {
-                    if (c == tm.character)
-                    {
-                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
-                    }
-                }
-            }
             else if (filas[i] == "moneda")
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
@@ -109,19 +84,7 @@ public class TextToMap : MonoBehaviour
                     }
                 }
             }
-            else if (filas[i] == "knight")
-            {
-                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
-                c = '~';
-                foreach (TextMapping tm in mappingData)
-                {
-                    if (c == tm.character)
-                    {
-                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
-                    }
-                }
-            }
-            else if (filas[i] == "tinaja")
+            else if (filas[i] == "tinajaVacia")
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
                 c = 't';
@@ -133,7 +96,7 @@ public class TextToMap : MonoBehaviour
                     }
                 }
             }
-            else if (filas[i] == "tinajaRompe")
+            else if (filas[i] == "tinajaLlave")
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
                 c = 'T';
@@ -145,7 +108,19 @@ public class TextToMap : MonoBehaviour
                     }
                 }
             }
-            else if (filas[i] == "barril")
+            else if (filas[i] == "tinajaMoneda")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = 'M';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+            else if (filas[i] == "barrilVacio")
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
                 c = '¿';
@@ -157,10 +132,59 @@ public class TextToMap : MonoBehaviour
                     }
                 }
             }
-            else if (filas[i] == "barrilRompe")
+            else if (filas[i] == "barrilLlave3")
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
                 c = '?';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+            else if (filas[i] == "llave5")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = '/';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+            else if (filas[i] == "enemigoLlave6")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = '*';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+            else if (filas[i] == "barrilMoneda")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = '!';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+
+            else if (filas[i] == "enemigoMoneda")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = '$';
                 foreach (TextMapping tm in mappingData)
                 {
                     if (c == tm.character)

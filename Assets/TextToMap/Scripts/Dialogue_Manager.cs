@@ -19,7 +19,6 @@ public class Dialogue_Manager : MonoBehaviour
     AudioSource myAudio;
     public AudioClip speakSound;
 
-    string[] frase = new string[2];
 
 
     private void Awake()
@@ -31,9 +30,6 @@ public class Dialogue_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        frase[0] = "Hola";
-        frase[1] = "Adios";
-        dialogue.sentenceList = frase;
         sentences = new Queue<string>();
         myAudio = GetComponent<AudioSource>();
       

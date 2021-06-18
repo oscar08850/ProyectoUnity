@@ -304,7 +304,21 @@ MonoBehaviour:
     prefab: {fileID: 6640482607929195887, guid: 3fdd44c2749ce684582e1cad717b7bd6,
       type: 3}
   - character: 84
-    prefab: {fileID: 5066370094604493258, guid: 2d91cbb9ec0297244b7d79e409e1a4e8,
+    prefab: {fileID: 8553399289410060391, guid: 7a39cdf265777d44f845849c1c377d48,
+      type: 3}
+  - character: 118
+    prefab: {fileID: 4890771634628495834, guid: 04ceef1b0b831fc4fb559444270ece09,
+      type: 3}
+  - character: 35
+    prefab: {fileID: 4148124096916415169, guid: 9d3d6dbf5fbd4c34f9e78f8b85522594,
+      type: 3}
+  - character: 112
+    prefab: {fileID: 3541004564233347101, guid: 259623c1bca102041983c4c8f8efd265,
+      type: 3}
+  - character: 94
+    prefab: {fileID: 655528879176302691, guid: 497ffcc46d835d942bfb47bca3466bd4, type: 3}
+  - character: 80
+    prefab: {fileID: 3872053422232723684, guid: d058bb0cd5c0a2545a75cf5a54854f36,
       type: 3}
   mapText: {fileID: 4900000, guid: d928ecea4199c864ca3e927f8ee81c06, type: 3}
   mapText2: {fileID: 4900000, guid: 0d0d3d37f6d5c9245a5549e72f10c387, type: 3}

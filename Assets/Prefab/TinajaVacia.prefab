@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6370478190484357442}
-  - component: {fileID: 6330393153121846881}
   - component: {fileID: 8644156941389042397}
   - component: {fileID: 395634802862217857}
+  - component: {fileID: 6698625985061345507}
   m_Layer: 0
-  m_Name: Tinaja
+  m_Name: TinajaVacia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,20 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6330393153121846881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3278753243505969688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aed8df3c0b30a9e488ec1f14d2c6cf58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  llave: {fileID: 0}
 --- !u!61 &8644156941389042397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,3 +109,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6698625985061345507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278753243505969688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed8df3c0b30a9e488ec1f14d2c6cf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  llave: {fileID: 0}

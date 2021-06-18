@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TinajaRompeScript : MonoBehaviour
+public class TinajaMonedaScript : MonoBehaviour
 {
-    public int health = 50;
+    public int health = 20;
 
-    public GameObject llave;
+    public GameObject moneda;
 
     public void TakeDamage(int damage)
     {
@@ -23,12 +23,12 @@ public class TinajaRompeScript : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
-        DropLlave();
+        DropMoneda();
     }
 
-    void DropLlave()
+    void DropMoneda()
     {
         Vector2 position = transform.position;
-        Instantiate(llave, position, Quaternion.identity);
+        Instantiate(moneda, position, Quaternion.identity);
     }
 }

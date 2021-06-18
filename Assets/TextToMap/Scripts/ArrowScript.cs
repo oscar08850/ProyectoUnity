@@ -18,8 +18,9 @@ public class ArrowScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         KnightScript knight = hitInfo.GetComponent<KnightScript>();
-        TinajaScript tinaja = hitInfo.GetComponent<TinajaScript>();
-        TinajaRompeScript tinajaRompe = hitInfo.GetComponent<TinajaRompeScript>();
+        TinajaVaciaScript tinajaVacia = hitInfo.GetComponent<TinajaVaciaScript>();
+        TinajaLlaveScript tinajaLlave = hitInfo.GetComponent<TinajaLlaveScript>();
+        TinajaMonedaScript tinajaMoneda = hitInfo.GetComponent<TinajaMonedaScript>();
         CoinController moneda = hitInfo.GetComponent<CoinController>();
         BossScript boss = hitInfo.GetComponent<BossScript>();
 
@@ -30,15 +31,21 @@ public class ArrowScript : MonoBehaviour
             Destroy(gameObject, 0f);
 
         }
-        else if (tinaja != null)
+        else if (tinajaVacia != null)
         {
-            tinaja.TakeDamage(damage);
+            tinajaVacia.TakeDamage(damage);
             Destroy(gameObject, 0f);
 
         }
-        else if (tinajaRompe != null)
+        else if (tinajaLlave != null)
         {
-            tinajaRompe.TakeDamage(damage);
+            tinajaLlave.TakeDamage(damage);
+            Destroy(gameObject, 0f);
+
+        }
+        else if (tinajaMoneda != null)
+        {
+            tinajaMoneda.TakeDamage(damage);
             Destroy(gameObject, 0f);
 
         }

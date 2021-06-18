@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8540239988049874276}
   - component: {fileID: 4593813554031859133}
   m_Layer: 0
-  m_Name: TinajaRompe
+  m_Name: TinajaLlave1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
