@@ -481,6 +481,12 @@ MonoBehaviour:
       type: 3}
   - character: 94
     prefab: {fileID: 655528879176302691, guid: 497ffcc46d835d942bfb47bca3466bd4, type: 3}
+  - character: 191
+    prefab: {fileID: 5090970414789687790, guid: b3892249eea854146b5e7d0d78930123,
+      type: 3}
+  - character: 63
+    prefab: {fileID: 4114499940481104764, guid: 8e52434fdc96a884a94e833c43e8231c,
+      type: 3}
   mapText: {fileID: 4900000, guid: 81b09ad522055cd48b95b5cd81483c5f, type: 3}
   mapText2: {fileID: 4900000, guid: 30e42fbe881939e42b43177fd64ee2ae, type: 3}
   currentPosition: {x: 0, y: 0}
