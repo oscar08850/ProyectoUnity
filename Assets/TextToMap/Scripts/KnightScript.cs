@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class KnightScript : MonoBehaviour
 {
     public Transform attackPoint;
-    public float attackRange = 1.5f;
+    public float attackRange = 1.3f;
     public LayerMask enemyLayers;
     public control contr;
     bool muerto = false;

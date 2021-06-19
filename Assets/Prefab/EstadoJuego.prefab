@@ -47,9 +47,10 @@ MonoBehaviour:
   monedas: 0
   maxHealth: 100
   health: 100
-  pocimaAzul: 10
-  pocimaRoja: 10
-  manzana: 10
+  pocimaAzul: 0
+  pocimaRoja: 0
+  manzana: 0
+  bossMuerto: 0
   powerFlecha: 40
   llave1: 0
   llave2: 0
@@ -58,7 +59,7 @@ MonoBehaviour:
   llave5: 0
   llave6: 0
   lasNinasBonitasNoPaganDinero: 0
-  muertos: 5
+  muertos: 0
   key1: {fileID: 0}
   key2: {fileID: 0}
   key3: {fileID: 0}

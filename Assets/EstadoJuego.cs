@@ -9,10 +9,10 @@ public class EstadoJuego : MonoBehaviour
     public int maxHealth = 100; //bbdd.MAXHEALTH
     public int health = 100; //bbdd.health???
 
-    public int pocimaAzul = 1; //BaseDatos
-    public int pocimaRoja = 1; //BaseDatos
-    public int manzana = 1; //BaseDatos
-    public bool bossMuerto = false;
+    private int pocimaAzul = 1; //BaseDatos
+    private int pocimaRoja = 1; //BaseDatos
+    private int manzana = 1; //BaseDatos
+    private bool bossMuerto = false;
 
     public int powerFlecha = 40;
     public bool llave1, llave2, llave3, llave4, llave5, llave6, lasNinasBonitasNoPaganDinero;
@@ -42,6 +42,7 @@ public class EstadoJuego : MonoBehaviour
         }
 
         this.health = maxHealth;
+        this.pocimaAzul = pocimaAzul;
 
         key1 = GameObject.FindGameObjectWithTag("Llave1");
         key2 = GameObject.FindGameObjectWithTag("Llave2");
