@@ -12,11 +12,13 @@ public class llave2 : MonoBehaviour
 
         if (player != null)
         {
-            // ACTIVAR BOOL
-            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetTrue(2);
-
             //Destruir llave
             Destroy(gameObject);
+
+            // ACTIVAR BOOL
+            if (!GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetKey(2))
+                GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetTrue(2);
+
         }
     }
 }

@@ -111,6 +111,7 @@ public class KnightScript : MonoBehaviour
     void DropLapida()
     {
         Vector2 position = transform.position;
+        position.x = position.x - 1;
         Instantiate(lapida, position, Quaternion.identity);
     }
 
@@ -126,6 +127,9 @@ public class KnightScript : MonoBehaviour
             return;
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, visionRadius);
+
+
     }
 
     public void mirarAlPlayer()

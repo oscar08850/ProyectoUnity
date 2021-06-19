@@ -9,14 +9,16 @@ public class llave4 : MonoBehaviour
 
         control player = collision.GetComponent<control>();
 
-
         if (player != null)
         {
-            // ACTIVAR BOOL
-            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetTrue(4);
-
             //Destruir llave
             Destroy(gameObject);
+
+            // ACTIVAR BOOL
+            if (!GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetKey(4))
+                GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().SetTrue(4);
+
+ 
         }
     }
 }

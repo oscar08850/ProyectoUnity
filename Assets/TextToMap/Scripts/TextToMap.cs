@@ -24,7 +24,7 @@ public class TextToMap : MonoBehaviour
                 Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
             }
         }
-        GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
+       // GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore(); //No recordamos pq esto esta aqui.
 
 
     }
@@ -185,6 +185,18 @@ public class TextToMap : MonoBehaviour
             {
                 currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
                 c = '$';
+                foreach (TextMapping tm in mappingData)
+                {
+                    if (c == tm.character)
+                    {
+                        Instantiate(tm.prefab, currentPosition, Quaternion.identity, transform);
+                    }
+                }
+            }
+            else if (filas[i] == "Boss")
+            {
+                currentPosition = new Vector2(System.Convert.ToSingle(filas[i + 1]), System.Convert.ToSingle(filas[i + 2]));
+                c = 'E';
                 foreach (TextMapping tm in mappingData)
                 {
                     if (c == tm.character)

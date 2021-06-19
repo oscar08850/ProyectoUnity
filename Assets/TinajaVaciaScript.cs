@@ -5,6 +5,7 @@ using UnityEngine;
 public class TinajaVaciaScript : MonoBehaviour
 {
     public int health = 50;
+    
 
 
     public void TakeDamage(int damage)

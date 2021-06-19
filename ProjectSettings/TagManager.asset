@@ -23,6 +23,7 @@ TagManager:
   - Llave5
   - Llave6
   - PocimaRoja
+  - Joystick
   layers:
   - Default
   - TransparentFX

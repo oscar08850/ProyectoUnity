@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4102516311695029566}
   - component: {fileID: 2202763555434703573}
   - component: {fileID: 6328771180826309132}
+  - component: {fileID: 3081850810399070716}
   m_Layer: 0
   m_Name: TinajaLlave4
   m_TagString: Untagged
@@ -123,3 +124,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   llave: {fileID: 4468067271924350245, guid: ff733193f461ef041844ccbd58fdddeb, type: 3}
+--- !u!61 &3081850810399070716
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5115678967163192039}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.001493007, y: -0.014431775}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1915124, y: 0.18354952}
+  m_EdgeRadius: 0

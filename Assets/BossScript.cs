@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossScript : MonoBehaviour
 {
     public Transform attackPoint;
-    public float attackRange = 1.5f;
+    public float attackRange = 2.7f;
     public LayerMask enemyLayers;
     public control contr;
     bool muerto = false;

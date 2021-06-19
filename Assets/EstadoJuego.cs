@@ -307,4 +307,19 @@ public class EstadoJuego : MonoBehaviour
 
     }
 
+    public int GetPocionRoja()
+    {
+        return this.pocimaRoja;
+    }
+
+    public int GetPocionAzul()
+    {
+        return this.pocimaAzul;
+    }
+
+    public int GetManzana()
+    {
+        return this.manzana;
+    }
+
 }

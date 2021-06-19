@@ -35,6 +35,10 @@ public class control : MonoBehaviour
     public ConstantForce2D force;
     public float moveSpeed = 10.0f; //Cambiar valor para cambiar velocidad personaje
 
+    private void Awake()
+    {
+        this.joystick = FindObjectOfType<Joystick>();
+    }
 
     void Start()
     {
@@ -50,7 +54,7 @@ public class control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.joystick = FindObjectOfType<Joystick>();
+        
 
         transform.rotation = Quaternion.identity;
         currentHealth = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetHealth();

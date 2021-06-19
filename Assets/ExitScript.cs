@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using EasyJoystick;
+
 
 
 public class ExitScript : MonoBehaviour
-
 {
+
+    [SerializeField] public Joystick joystick;
+
     public GameObject key1, key2, key3, key4, key5, key6;
 
     private void Awake()
@@ -45,6 +49,9 @@ public class ExitScript : MonoBehaviour
     }
     private void Update()
     {
+        this.joystick = FindObjectOfType<Joystick>();
+
+
         if (GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetKey(1))
             key1.SetActive(true);
         if (GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().GetKey(2))
