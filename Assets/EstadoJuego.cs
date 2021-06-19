@@ -12,10 +12,13 @@ public class EstadoJuego : MonoBehaviour
     public int pocimaAzul = 1; //BaseDatos
     public int pocimaRoja = 1; //BaseDatos
     public int manzana = 1; //BaseDatos
+    public bool bossMuerto = false;
 
     public int powerFlecha = 40;
     public bool llave1, llave2, llave3, llave4, llave5, llave6, lasNinasBonitasNoPaganDinero;
-    public int muertos = 5;
+    public int muertos = 0;
+
+    
 
     public GameObject key1, key2, key3, key4, key5, key6;
 
@@ -74,6 +77,11 @@ public class EstadoJuego : MonoBehaviour
 
     }
 
+    public void BossMuerto()
+    {
+        this.bossMuerto = true;
+    }
+
     public bool GetKey(int numero)
     {
         switch (numero)
@@ -106,8 +114,11 @@ public class EstadoJuego : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tiempo += Time.deltaTime;
-        tiempoContador = (int)tiempo;
+        if (bossMuerto = false || health > 0)
+        {
+            tiempo += Time.deltaTime;
+            tiempoContador = (int)tiempo;
+        }
 
         if (llave1)
             key1.SetActive(true);

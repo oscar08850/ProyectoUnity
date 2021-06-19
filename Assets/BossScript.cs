@@ -84,14 +84,13 @@ public class BossScript : MonoBehaviour
     {
         Destroy(gameObject, 2f);
         GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().AddMuertos(1);
+        GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().BossMuerto();
+
+
 
         yield return new WaitForSecondsRealtime(1.8f);
 
-        DropLapida();
-
-
-
-        DropLlave();
+        //DropLapida();
 
     }
 
@@ -101,11 +100,6 @@ public class BossScript : MonoBehaviour
         Instantiate(lapida, position, Quaternion.identity);
     }
 
-    void DropLlave()
-    {
-        Vector2 position = transform.position;
-        Instantiate(llave, position, Quaternion.identity);
-    }
 
     private void OnDrawGizmosSelected()
     {
