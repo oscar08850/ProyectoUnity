@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class ShootingBoton : MonoBehaviour
 {
 
     public Transform firePoint;
@@ -11,40 +11,17 @@ public class Shooting : MonoBehaviour
     public control a;
 
     public float bulletForce = 50f;
-    
 
-    
+
+
     // Update is called once per frame
     void Update()
     {
 
 
-        if (a.mirandoDerecha == true)
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                Shoot();
-
-                a.animator.SetTrigger("ShootPlayer"); //MOVEMENT STATE
-
-            }
-        }
-        
-        else
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                Shoot2();
-                a.animator.SetTrigger("ShootPlayer"); //MOVEMENT STATE
-
-
-            }
-        }
-        
-
-  
-     
     }
+
+
 
 
     void Shoot() //Disparo derecha
@@ -75,8 +52,5 @@ public class Shooting : MonoBehaviour
         force2D.force = new Vector2(-50, 0);
         sprite.flipX = true;
         rb2.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-
-
-
     }
 }

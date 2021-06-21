@@ -15,7 +15,7 @@ public class EstadoJuego : MonoBehaviour
     private bool bossMuerto = false;
 
     public int powerFlecha = 40;
-    public bool llave1, llave2, llave3, llave4, llave5, llave6, lasNinasBonitasNoPaganDinero;
+    public bool llave1, llave2, llave3, llave4, llave5, llave6;
     public int muertos = 0;
 
     
@@ -42,7 +42,6 @@ public class EstadoJuego : MonoBehaviour
         }
 
         this.health = maxHealth;
-        this.pocimaAzul = pocimaAzul;
 
         key1 = GameObject.FindGameObjectWithTag("Llave1");
         key2 = GameObject.FindGameObjectWithTag("Llave2");
@@ -332,6 +331,21 @@ public class EstadoJuego : MonoBehaviour
     public int GetManzana()
     {
         return this.manzana;
+    }
+
+    public void Reiniciar()
+    {
+        this.health = maxHealth;
+        this.tiempo = 0.0f;
+        this.tiempoContador = 0;
+        this.monedas = 0;
+        this.muertos = 0;
+        this.llave1 = false;
+        this.llave2 = false;
+        this.llave3 = false;
+        this.llave4 = false;
+        this.llave5 = false;
+        this.llave6 = false;
     }
 
 }

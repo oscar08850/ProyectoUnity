@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CasaToni.unity
     guid: dac9cad6a442d2e4cbd94b74d9a875e8
+  - enabled: 1
+    path: Assets/Scenes/Muerte.unity
+    guid: a0a69088739d5ba40986aad53603d859
   m_configObjects: {}

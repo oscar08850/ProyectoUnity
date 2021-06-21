@@ -61,10 +61,8 @@ public class Dialogue_Manager : MonoBehaviour
             displayText.text = activeSentence;
             return;
         }
-        Debug.Log(displayText.text);
 
         activeSentence = sentences.Dequeue();
-        Debug.Log(activeSentence);
         displayText.text = activeSentence;
 
         StopAllCoroutines();
@@ -96,7 +94,7 @@ public class Dialogue_Manager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.Return) && displayText.text == activeSentence)               
+            if (Input.GetButtonDown("Fire1") && displayText.text == activeSentence)               
             {
                 DisplayNextSentence();
             }

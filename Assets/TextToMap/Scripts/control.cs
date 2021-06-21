@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using EasyJoystick;
+using UnityEngine.SceneManagement;
+
 
 public class control : MonoBehaviour
 {
@@ -62,6 +64,8 @@ public class control : MonoBehaviour
         {
             muerto = true;
             animator.SetTrigger("PlayerDie");
+            StartCoroutine(pantallaMuerto());
+
         }
         else if (muerto == false)
         {
@@ -209,4 +213,18 @@ public class control : MonoBehaviour
             GameObject.FindGameObjectWithTag("Coin").GetComponent<ScoreManager>().PintarScore();
         }
     }
+
+    public bool getMirandoDerecha() {
+        return mirandoDerecha;
+    }
+
+    IEnumerator pantallaMuerto()
+    {
+        yield return new WaitForSecondsRealtime(3.5f);
+
+        SceneManager.LoadScene(6);
+
+    }
+
+
 }

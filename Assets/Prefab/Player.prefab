@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6063304115723897415}
   - component: {fileID: 6063304115723897408}
   - component: {fileID: 7145150057175732136}
-  - component: {fileID: 487022532710529459}
+  - component: {fileID: 2000653011327994954}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6063304115723897408}
   speed: 0
+  joystick: {fileID: 0}
   movement: {x: 0, y: 0}
   cam: {fileID: 0}
   mirandoDerecha: 1
@@ -177,7 +178,7 @@ MonoBehaviour:
   rb: {fileID: 6063304115723897412}
   force: {fileID: 0}
   moveSpeed: 5
---- !u!114 &487022532710529459
+--- !u!114 &2000653011327994954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,7 +194,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 7130864611110902114, guid: 22d403d72be673e41ab24eb1274057f8,
     type: 3}
   a: {fileID: 7145150057175732136}
-  bulletForce: 20
+  bulletForce: 50
 --- !u!1 &9106078570895982304
 GameObject:
   m_ObjectHideFlags: 0
