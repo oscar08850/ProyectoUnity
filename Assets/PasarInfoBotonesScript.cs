@@ -47,6 +47,8 @@ public class PasarInfoBotonesScript : MonoBehaviour
         if (this.pocimaAzul > 0)
         {
             GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().PocimaAzul();
+            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().enviarPocionAzul();
+
         }
     }
 
@@ -55,6 +57,8 @@ public class PasarInfoBotonesScript : MonoBehaviour
         if (this.pocimaRoja > 0)
         {
             GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().PocimaRoja();
+            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().enviarPocionRoja();
+
         }
     }
 
@@ -63,6 +67,7 @@ public class PasarInfoBotonesScript : MonoBehaviour
         if (this.manzana > 0)
         {
             GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().Manzana();
+            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().enviarManzana();
         }
     }
 

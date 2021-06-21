@@ -65,8 +65,8 @@ public class Dialogue_Manager : MonoBehaviour
         activeSentence = sentences.Dequeue();
         displayText.text = activeSentence;
 
-        StopAllCoroutines();
-        StartCoroutine(TypeTheSentence(activeSentence));
+        //StopAllCoroutines();
+        //StartCoroutine(TypeTheSentence(activeSentence));
     }
 
     IEnumerator TypeTheSentence(string sentence)
@@ -75,9 +75,9 @@ public class Dialogue_Manager : MonoBehaviour
 
         foreach(char letter in sentence.ToCharArray())
         {
-            displayText.text += letter;
-            myAudio.PlayOneShot(speakSound);
-            yield return new WaitForSeconds(typingSpeed);
+           displayText.text += letter;
+          myAudio.PlayOneShot(speakSound);
+           yield return new WaitForSeconds(typingSpeed);
         }
     }
 

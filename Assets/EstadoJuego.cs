@@ -4,14 +4,29 @@ using UnityEngine;
 
 public class EstadoJuego : MonoBehaviour
 {
-    public Vector2 playerPosition = new Vector2(12, -9);
+
+#if UNITY_ANDROID
+
+AndroidJavaClass UnityPlayer;
+
+
+AndroidJavaObject currentActivity;
+
+
+AndroidJavaObject intent;
+
+
+#endif
+
+
+public Vector2 playerPosition = new Vector2(12, -9);
     public int monedas = 0; // bbdd.monedas???
     public int maxHealth = 100; //bbdd.MAXHEALTH
     public int health = 100; //bbdd.health???
 
-    private int pocimaAzul = 1; //BaseDatos
-    private int pocimaRoja = 1; //BaseDatos
-    private int manzana = 1; //BaseDatos
+    public int pocimaAzul = 0; //BaseDatos
+    public int pocimaRoja = 0; //BaseDatos
+    public int manzana = 0; //BaseDatos
     private bool bossMuerto = false;
 
     public int powerFlecha = 40;
@@ -30,7 +45,10 @@ public class EstadoJuego : MonoBehaviour
 
 
     void Awake()
+
     {
+
+        Debug.Log("Dentro del AWAKE ESTADO JUEGO");
         if (estadoJuego == null)
         {
             estadoJuego = this;
@@ -41,6 +59,55 @@ public class EstadoJuego : MonoBehaviour
             Destroy(gameObject);
         }
 
+        ///
+
+#if UNITY_ANDROID
+
+        UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        if (UnityPlayer == null) {
+            Debug.Log("UnityPlayer Null");
+        }
+        else
+            Debug.Log("UnityPlayer not Null");
+
+
+        
+        currentActivity = UnityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+        if (currentActivity == null)
+        {
+            Debug.Log("currentActivity Null");
+        }
+        else
+            Debug.Log("currentActivity not Null");
+
+
+        intent = currentActivity.Call<AndroidJavaObject>("getIntent");
+        if (intent == null)
+        {
+            Debug.Log("intent Null");
+        }
+        else
+            Debug.Log("intent not Null");
+
+        //string text = intent.Call<string>("getStringExtra", "varName");
+
+
+        //AndroidJavaObject extras = intent.Call<AndroidJavaObject>("GetExtras");
+
+        this.pocimaAzul = intent.Call<int>("getIntExtra", "pocionAzul",-69);
+        this.pocimaRoja = intent.Call<int>("getIntExtra", "pocionRoja",-69);
+        this.manzana = intent.Call<int>("getIntExtra", "manzana",-69);
+
+        this.maxHealth = intent.Call<int>("getIntExtra", "maxHealth", -69);
+        GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Healthbar>().SetMaxHealth(this.maxHealth);
+
+        this.powerFlecha = intent.Call<int>("getIntExtra", "powerFlecha", -69);
+        Debug.Log("pocima azul " + this.pocimaAzul + "pocima roja " + this.pocimaRoja + "manzana " + this.manzana);
+
+#endif
+
+
+        ///
         this.health = maxHealth;
 
         key1 = GameObject.FindGameObjectWithTag("Llave1");
@@ -50,6 +117,19 @@ public class EstadoJuego : MonoBehaviour
         key5 = GameObject.FindGameObjectWithTag("Llave5");
         key6 = GameObject.FindGameObjectWithTag("Llave6");
 
+    }
+
+
+
+    private void FixedUpdate()
+    {
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();           
+            }
+        }
     }
 
     private void Start()
@@ -158,8 +238,14 @@ public class EstadoJuego : MonoBehaviour
         this.monedas = this.monedas + monedas;
     }
 
+    //Fuerza
+    public int getFuerza() {
+        return powerFlecha;
+    }
 
-    //Monedas
+
+
+    //Muertos
 
     public int GetMuertos()
     {
@@ -346,6 +432,36 @@ public class EstadoJuego : MonoBehaviour
         this.llave4 = false;
         this.llave5 = false;
         this.llave6 = false;
+    }
+
+
+    public void enviar(){
+        currentActivity.Call("onGameFinish", monedas, muertos, tiempoContador);
+    }
+
+    public void enviarPocionRoja()
+    {
+        currentActivity.Call("onGamePocionRoja", "pocionRoja");
+    }
+
+    public void enviarPocionAzul()
+    {
+        currentActivity.Call("onGamePocionAzul", "PocionAzul");
+    }
+
+    public void enviarManzana ()
+    {
+        currentActivity.Call("onGameManzana", "manzana");
+    }
+
+
+
+
+
+
+    public void enviarMonedas() {
+        currentActivity.Call("onGameMonedas", monedas);
+
     }
 
 }

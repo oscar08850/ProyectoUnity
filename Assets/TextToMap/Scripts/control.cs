@@ -64,6 +64,8 @@ public class control : MonoBehaviour
         {
             muerto = true;
             animator.SetTrigger("PlayerDie");
+            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().enviarMonedas();
+
             StartCoroutine(pantallaMuerto());
 
         }
@@ -101,9 +103,6 @@ public class control : MonoBehaviour
 
     void movements()
     {
-
-
-
 
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
 

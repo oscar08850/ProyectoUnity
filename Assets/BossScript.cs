@@ -53,6 +53,7 @@ public class BossScript : MonoBehaviour
            // animator.SetTrigger("knightDie");
             muerto = true;
 
+            GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().enviar();
             // animator.SetBool("knightDie", true); //MOVEMENT STATE
 
             StartCoroutine(Die());

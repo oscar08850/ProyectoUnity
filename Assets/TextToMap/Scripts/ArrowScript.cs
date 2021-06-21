@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrowScript : MonoBehaviour
 {
     GameObject objeto;
-    int damage = 40;
+    int damage = GameObject.FindGameObjectWithTag("EstadoJuego").GetComponent<EstadoJuego>().getFuerza();
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
